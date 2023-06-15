@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="estyle2.css">
+    <title>Formulario de Registro</title>
+</head>
+<body >
+
+<div class="container">
+<section class="zona1">
+    <header>
+            <a href="index.html" class="logo">SIRIM</a>
+        <nav>
+            <ul>
+                <li><a href="login.html">iniciar sesion</a></li>
+                <li><a href="registro.html">Resgistrate</a></li>
+        </nav>
+    </header>
+    <section>
+        <script type="text/javascript">
+            window.addEventListener("scroll", function(){
+                var header = document.querySelector("header");
+                header.classList.toggle("abajo",window.scrollY>0);
+            })
+        </script>
+    <form action="">
+        <h1>Formulario de Registro </h1>
+        <input type="text" onkeypress="return soloLetras(event)" placeholder="ingrese sus nombres" maxlength="25" minlength="3" />
+        <input type="nombres" placeholder="Ingrese sus appelidos"  maxlength="25" minlength="3">
+        <input type="email" placeholder="Ingrese su Correo"  maxlength="45">
+        <input type="password" placeholder="Ingrese su contraseña" maxlength="10" minlength="5">
+        <p class="acuerdo">Estoy de acuerdo con terminos y condiciones</p>
+        <button a>Registrarse</button>
+        <p class="link"><a href="login.html" style="text-decoration: none;">¿Ya tienes cuenta?</a></p>
+    </form>
+</div>
+<script src="jsfile.js"></script>
+<script src="espacioblanco.js"></script>
+</body>
+</html>
