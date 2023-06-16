@@ -27,18 +27,31 @@
                 header.classList.toggle("abajo",window.scrollY>0);
             })
         </script>
-    <form action="">
-        <h1>Formulario de Registro </h1>
-        <input type="text" onkeypress="return soloLetras(event)" placeholder="ingrese sus nombres" maxlength="25" minlength="3" />
-        <input type="nombres" placeholder="Ingrese sus appelidos"  maxlength="25" minlength="3">
-        <input type="email" placeholder="Ingrese su Correo"  maxlength="45">
-        <input type="password" placeholder="Ingrese su contraseña" maxlength="10" minlength="5">
-        <p class="acuerdo">Estoy de acuerdo con terminos y condiciones</p>
-        <button a>Registrarse</button>
-        <p class="link"><a href="login.html" style="text-decoration: none;">¿Ya tienes cuenta?</a></p>
-    </form>
+<form action="">
+    <h1>Formulario de Registro </h1>
+    <input type="text" onkeypress="return soloLetras(event)" placeholder="Ingrese sus apellidos" maxlength="25" minlength="3"/>
+    <input type="text" onkeypress="return soloLetras(event)" placeholder="Ingrese sus nombres" maxlength="25" minlength="3" />
+    <select class="Tipodocumento">
+        <option value="Seleccione">Seleccione su tipo de documento</option>
+        <option value="Cedula">CEDULA</option>
+        <option value="Cedula">PPT</option>
+        <option value="Cedula">PIP</option>
+        <option value="Cedula">PEP</option>
+        <option value="Cedula">IME</option>
+    </select>
+    <input type="text" placeholder="Ingrese su numero de identidad " maxlength="15"minlength="6"  onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
+    <select class="Tipodocumento">
+        <option value="Seleccione">Seleccione su genero</option>
+        <option value="Femenino">Femenino</option>
+        <option value="Masculino">Masculino</option>
+    </select>
+    <input type="date" name="date">
+    <input type="text" placeholder="Ingrese su numero telefonico " maxlength="10" minlength="7" onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
+    <input type="direccion"placeholder="Ingrese su direccion de residencia" maxlength="50">
+    <button a>Registrarse</button>
+    <p class="link"><a href="login.html" style="text-decoration: none;">¿Ya tienes cuenta?</a></p>
+</form>
 </div>
-<script src="jsfile.js"></script>
 <script src="espacioblanco.js"></script>
 </body>
 </html>

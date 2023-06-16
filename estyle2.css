@@ -259,7 +259,7 @@ textarea{
   }
   /* Fin Boton subir que aparece  */
 
-
+    /* error formularios */
 
   .error {
 	border: 2px solid red;
@@ -268,3 +268,4 @@ textarea{
   .error-message {
 	color: red;
   } 
+      /* error formularios */
