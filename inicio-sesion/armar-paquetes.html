@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Paquetes</title>
+    <link rel="stylesheet" href="./css/style-armar-paquetes.css">
+    <script src="./js/fecha-vencimiento.js"></script>
+</head>
+<section class="container">
+    <header>Armar paquetes</header>
+   
+    <form action="#" class="form">
+
+        <div class="input-box">
+            <label>Seleccionar producto</label><br>
+            <div class="select-box">
+                <select>
+                <option hidden>Escoja producto</option>
+                <option>Arroz</option>
+              </select>
+            </div>         
+        </div> 
+
+        <div class="input-box">
+            <label>Seleccionar presentación</label><br>
+            <div class="select-box">
+                <select>
+                <option hidden>Escoja presentación</option>
+                <option>Bolsa o paquete</option>
+                <option>Botella</option>
+                <option>Caja</option>
+                <option>A granel</option>
+                <option>Sachet</option>
+                <option>Lata</option>
+                <option>Unidad</option>
+              </select>
+            </div>         
+        </div>
+        
+        <div class="column">
+    
+            <div class="input-box">
+                <label>Seleccionar contenido</label>
+                <input type="text" placeholder="Por ejemplo: 500" required />
+            </div>
+
+            <div class="input-box">
+                <label>Seleccionar unidad</label>
+                <div class="select-box">
+                    <select>
+                        <option hidden>Por ejemplo: Gramos</option>
+                        <option>Gramos</option>
+                        <option>Kilogramos</option>
+                        <option>Litros</option>
+                        <option>Mililitros</option>
+                        <option>Onzas</option>
+                        <option>Litros</option>
+                    </select>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="input-box">
+            <label>Seleccionar cantidad</label><br>
+            <div class="select-box">
+                <input list="Cantidad">
+                <datalist id="productos">
+                    <option value="1"></option>
+                    <option value="2"></option>
+                </datalist>
+
+            </div>         
+        </div>
+
+        <input class="btn" type="submit" value="Adicionar al paquete">
+           
+    </form>
+</section>
+  
+<section>
+        <table>
+            <thead>
+                <th>Producto</th>
+                <th>Presentación</th>
+                <th>Contenido</th>
+                <th>Unidad</th>
+                <th>Cantidad</th>
+                <th>Eliminar</th>
+            </thead>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+        <div class="row">
+            <div>
+                <input class="btn" type="submit" value="Editar">
+            </div>
+            <div>
+                <input class="btn" type="submit" value="Guardar cambios">
+            </div>
+        </div>
+</section>
+
+<section class="container">
+   
+    <form action="#" class="form">
+
+        <div class="input-box">
+            <label>Cantidad de paquetes</label>
+            <input type="text" placeholder="Por ejemplo: 40" required />
+        </div>
+
+        <input class="btn" type="submit" value="Crear paquetes">
+           
+    </form>
+</section>
+
+<section>
+    
+</section>
+
+
+
+</body>
+</html>

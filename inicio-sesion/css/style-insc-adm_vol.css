@@ -1,0 +1,176 @@
+body{
+    margin:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.insc-header{
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin:0;
+
+}
+
+.opcion button{
+    padding: 4rem;
+    background: linear-gradient(
+        90deg,
+        #ddbc60 25%,
+        #CD7A57 100%);
+        color:#555357;
+    font-size: 1.3rem;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 1rem;
+    border-top: none;
+    border-left: none;
+    margin: 1rem;
+}
+
+.opcion button:hover{
+    background: #b4994e;
+}
+
+main.inscription-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inscribir-conv{
+    display: none;
+}
+
+.inscribir-conv label{
+    display: flex;
+    flex-direction: column;
+}
+
+.inscribir-conv label span{
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1.6rem;
+    text-align: center;
+
+}
+.inscribir-conv label input{
+    border-radius: 1rem;
+    border-color: #707070;
+    padding: 2.5rem 0;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.column{
+    display: flex;
+    column-gap: 1rem;
+}
+.input-box_doc{
+    display: flex;
+    flex-direction: column;
+    font-size: 2.5rem;
+}
+
+.input-box_doc input{
+    margin-top: 1.6rem;
+}
+
+.select-box{
+    position: relative;
+    outline: none;
+    font-size: 2.5rem;
+    border: 0.1rem solid;
+    border-radius: 1rem;
+    padding: 0 1rem;
+    background-color: white;
+    margin-top: 1.6rem;
+}
+
+.select-box select{
+    height: 100%;
+    width: 70%;
+    outline: none;
+    border: none;
+    font-size: 2.5rem;
+    background-color: white;
+}
+
+#insc-usuario button.inscribirse-btn{
+    padding: 1rem 5rem;
+    background: linear-gradient(
+        90deg,
+        #3FABDD 25%,
+        #3C839D 100%);
+        color:white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 2.5rem;
+    border-top: none;
+    border-left: none;
+    margin-top: 2rem;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 3rem;
+}
+
+#insc-usuario button.inscribirse-btn:hover{
+    background: #579eb8;
+}
+
+section.inscribir-conv .cajabuscar{
+    display: flex;
+    flex-direction: column;
+}
+.cajabuscar{
+    margin: 2rem 0;
+
+}
+
+table.conv-table{
+    --border:solid 1px #707070;
+    border-spacing: 0;
+    border-collapse: separate;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: var(--border);
+    border-bottom: none;
+  }
+
+table{
+    border: solid;
+    color: #2f2e30;
+    font-size: 1.4rem;
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 40rem;
+    margin-left: 25px;
+    text-align: center;
+  
+  }
+
+  thead{
+    background-color: #3FABDD;
+  }
+
+  th{
+    padding: 2rem 1.5rem;
+    font-weight: 700;
+    border-bottom: solid 1px  #707070;
+  
+  }
+  td{
+    padding: 1.5rem;
+    border-bottom: solid 0.1rem  #707070;
+  }
+  
+  tbody tr{
+    background-color: white;
+  }
+
+  tbody tr:hover{
+    background-color: #ADDEF4;
+  }

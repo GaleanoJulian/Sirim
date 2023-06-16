@@ -1,0 +1,57 @@
+.menu-expanded{
+    width: 100%;
+}
+
+.menu-expanded #profile #photo {
+    width: 14rem;
+    margin: auto;
+}
+    
+.menu-collapsed{
+    width: var(--width-collapsed);
+}
+
+.menu-collapsed #profile #name{
+    display: none;
+}
+
+.menu-collapsed .item{
+    display: none;
+}
+
+.menu-collapsed#sidemenu .separator{
+    display:none;
+}
+
+.menu-collapsed #menu-items{
+    display:none;
+}
+
+.menu-collapsed #profile {
+    display: none;
+}
+.menu-collapsed#sidemenu{
+    width: 100%;
+    height:4rem;
+}
+
+.menu-expanded #header #title span{
+    width: 100%;
+    overflow: hidden;
+}
+body{
+    margin-left: -0.5rem;
+    margin-top:5rem
+}
+
+.main-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 7rem;
+    text-align: center;
+    
+}
+
+#sidemenu #menu-items .item{
+    width: 100%;
+}

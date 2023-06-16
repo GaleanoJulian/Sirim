@@ -1,0 +1,53 @@
+body{
+    margin: 0;
+}
+
+header h1 {
+    text-align: center;
+    margin-left: 2.5rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+.entrega-user{
+    display: flex;
+    justify-content: center;
+}
+
+table{
+    border: 0.1rem solid #707070;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 1rem;
+    overflow: hidden;
+    border-bottom: none;
+    color: #2f2e30;
+    font-size: 1.4rem;
+    table-layout: fixed;
+    width: 40rem;
+    margin-left: 2.5rem;
+    text-align: center;
+}
+
+thead{
+    background-color: #3FABDD;
+}
+
+th{
+    padding: 2rem 1.5rem;
+    font-weight: 700;
+    border-bottom: solid 1px  #707070;
+}
+  
+td{
+    padding: 1.5rem;
+    border-bottom: solid 0.1rem  #707070;
+}
+  
+tbody tr{
+    background-color: white;
+}
+
+tbody tr:hover{
+    background-color: #ADDEF4;
+}

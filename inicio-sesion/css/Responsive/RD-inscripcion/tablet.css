@@ -1,0 +1,52 @@
+.insc-header{
+    margin-top: 2%;
+    margin-bottom: 5%;
+    margin-left: 3%;
+    margin-left: 4%;
+}
+
+.opcion button{
+    padding: 3.7rem;
+    font-size: 1.5rem;
+}
+
+.inscribir-conv label span{
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 1.3rem;    
+}
+
+.inscribir-conv label input{
+    border-radius: 0.8rem;
+    padding: 1.2rem 0;
+    font-size: 2.5rem;
+}
+
+#insc-usuario button.inscribirse-btn{
+    font-size: 2.7rem;
+    margin-top: 2rem;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 2rem;
+}
+
+table{
+    font-size: 1.5rem;
+    table-layout:auto;
+    width: auto;
+}
+th{
+    padding: 1rem 0.6rem;
+    font-weight: bold;
+}
+
+td{
+    padding: 1rem 0;
+  }
+.inscribir-conv table{
+    margin: 0;   
+}
+tbody tr:hover{
+    background-color: #ADDEF4;
+  }

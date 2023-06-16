@@ -1,0 +1,214 @@
+body{
+    margin: 0;
+}
+
+header h1 {
+    text-align: center;
+    margin-left: 2.5rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+.opt-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-left: 8%;
+    margin-right: auto;
+
+}
+
+.opcion button{
+    padding: 4rem;
+    background: linear-gradient(
+        90deg,
+        #ddbc60 25%,
+        #CD7A57 100%);
+        color:#555357;
+    font-size: 1.3rem;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 1rem;
+    border-top: none;
+    border-left: none;
+    margin: 1rem;
+}
+
+.opcion button:hover{
+    background: #b4994e;
+}
+
+.opt-container{
+    display: none;
+}
+
+.lista-productos{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 8%;
+    margin-right: 2%;
+}
+
+table{
+    border: 0.1rem solid #707070;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 1rem;
+    overflow: hidden;
+    border-bottom: none;
+    color: #2f2e30;
+    font-size: 1.4rem;
+    table-layout: auto;
+    width: auto;
+    text-align: center;
+
+}
+
+thead{
+    background-color: #3FABDD;
+}
+
+th{
+    padding:1.6rem 0.5rem ;
+    font-weight: 700;
+    border-bottom: solid 0.1rem  #707070;
+}
+  
+td{
+    padding: 1.5rem;
+    border-bottom: solid 0.1rem  #707070;
+}
+  
+tbody tr{
+    background-color: white;
+}
+
+tbody tr:hover{
+    background-color: #ADDEF4;
+}
+
+.row input.btn{
+    padding: 1rem 5rem;
+    background: linear-gradient(
+        90deg,
+        #3FABDD 25%,
+        #3C839D 100%);
+        color:white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 2.5rem;
+    border-top: none;
+    border-left: none;
+    margin-top: 2%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 2%;
+}
+
+.revision:hover{
+    background: #579eb8;
+    
+}
+
+
+  .container {
+    position: static;
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.1);
+  }
+  .container header {
+    font-size: 3rem;
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+  }
+  .container .form {
+    margin-top: 3rem;
+  }
+  .form .input-box {
+    width: 100%;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+  }
+  .input-box label {
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  input::placeholder {
+    color: #333;
+    font-size: 1.5rem;
+    opacity: 0.7; 
+  }
+  
+  .form :where(.input-box input, .select-box) {
+    position: relative;
+    height: 5rem;
+    width: 100%;
+    outline: none;
+    font-size: 1.5rem;
+    color: #707070;
+    margin-top: 0.8rem;
+    border: 0.1rem solid #ddd;
+    border-radius: 0.6rem;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+  }
+  .input-box input:focus {
+    box-shadow: 0 0.1rem 0 rgba(0, 0, 0, 0.1);
+  }
+  .form .column {
+    display: flex;
+    column-gap: 1.5rem;
+  }
+  
+  .select-box select {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    color: #707070;
+    font-size: 1.5rem;
+    background-color: white;
+  }
+  .form .btn {
+    height: 5.5rem;
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 3rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;  
+    background: linear-gradient(
+        90deg,
+        #ddbc60 25%,
+        #CD7A57 100%);
+    
+    color:#2f2e30;
+    border-radius: 2.5rem;
+    border-top: none;
+    border-left: none;
+  }
+  .form .btn:hover {
+    background: #b4994e;
+  }
+
+section .row{
+    display: flex;
+    flex-direction: row;
+}
+
+  /*Responsive*/
+  @media screen and (max-width: 500px) {
+    .form .column {
+      flex-wrap: wrap;
+  }
+  }

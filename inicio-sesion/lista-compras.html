@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Lista compras</title>
+    <link rel="stylesheet" href="./css/style-lista_compras.css">
+    <script src="./js/opcion-lista_prod.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Lista de compras</h1>
+        <section class="opt-buttons">
+            <div class="opcion">
+                <button onclick="mostrarContenido('generar-lista')">Generar listado</button>
+            </div>
+            <div class="opcion">
+                <button onclick="mostrarContenido('consulta-listas')">Consultar listados</button>
+            </div>
+            <div class="opcion">
+                <button onclick="mostrarContenido('personalizar-lista')">Personalizar productos para listados</button>
+            </div>
+        </section>
+    </header>
+
+    <main class="main-lista_prod">
+        <section id="generar-lista" class="opt-container">
+            <div class="lista-productos">
+                <table>
+                    <thead>
+                        <th>Producto</th>
+                        <th>Categoría</th>
+                        <th>Presentación</th>
+                        <th>Contenido</th>
+                        <th>Unidad</th>
+                        <th>Cantidad</th>
+    
+                    </thead>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+    
+                    </tr>
+                </table>
+    
+                <button type="submit" class="revision">Solicitar revisión</button>
+                <button type="submit" class="revision">Generar lista</button>  
+            </div>
+        </section>
+
+        <section id="consulta-listas" class="opt-container">
+            <div class="lista-productos">
+                <table>
+    
+                    <thead>
+                        <th>Listado</th>
+                        <th>Fecha de elaboración</th>
+                        <th>Elaboró</th>
+                        <th>Rol</th>
+                        <th>Aprobar</th>
+                        <th>Estado de aprobación</th>
+                        <th>Aprobó</th>
+                        <th>Fecha de aprobación</th>
+                    </thead>
+    
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+    
+                    </tr>
+                </table>
+    
+            </div>
+        </section>          
+        
+        <section id="personalizar-lista" class="opt-container">
+            <div class="lista-productos">
+
+                <button type="submit" class="revision">Agregar producto nuevo</button> 
+    
+                <table>
+                    <thead>
+                        <th>Producto</th>
+                        <th>Categoría</th>
+                        <th>Presentación</th>
+                        <th>Contenido</th>
+                        <th>Unidad</th>
+                        <th>Cantidad requerida</th>
+    
+                    </thead>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+    
+                    </tr>
+                </table>
+                
+                <button type="submit" class="revision">Guardar cambios</button> 
+    
+            </div>
+        </section>
+        
+    </main>
+
+</body>
+</html>

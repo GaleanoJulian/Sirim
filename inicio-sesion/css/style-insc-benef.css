@@ -1,0 +1,191 @@
+body{
+    margin:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.insc-header{
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin:0;
+
+}
+
+.opcion button{
+    padding: 4rem;
+    background: linear-gradient(
+        90deg,
+        #ddbc60 25%,
+        #CD7A57 100%);
+        color:#555357;
+    font-size: 1.3rem;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 1rem;
+    border-top: none;
+    border-left: none;
+    margin: 1rem;
+}
+
+.opcion button:hover{
+    background: #b4994e;
+}
+
+main.inscription-main{
+    display: flex;
+    justify-content: center;
+}
+
+.inscribir-conv{
+    display: none;
+
+}
+
+.inscribir-conv label{
+    display: flex;
+    flex-direction: column;
+}
+
+.inscribir-conv label span{
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1.6rem;
+    text-align: center;
+
+}
+.inscribir-conv label input{
+    border-radius: 1rem;
+    border-color: #707070;
+    padding: 2.5rem 0;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+#insc-usuario button.inscribirse-btn{
+    padding: 1rem 5rem;
+    background: linear-gradient(
+        90deg,
+        #3FABDD 25%,
+        #3C839D 100%);
+        color:white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 2.5rem;
+    border-top: none;
+    border-left: none;
+    margin-top: 2rem;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 3rem;
+}
+
+#insc-usuario button.inscribirse-btn:hover{
+    background: #579eb8;
+}
+
+table.conv-table{
+    --border:solid 1px #707070;
+    border-spacing: 0;
+    border-collapse: separate;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: var(--border);
+    border-bottom: none;
+  }
+
+table{
+    border: solid;
+    color: #2f2e30;
+    font-size: 1.4rem;
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 40rem;
+    margin-left: 25px;
+    text-align: center;
+  
+  }
+
+  thead{
+    background-color: #3FABDD;
+  }
+
+  th{
+    padding: 2rem 1.5rem;
+    font-weight: 700;
+    border-bottom: solid 1px  #707070;
+  
+  }
+  td{
+    padding: 1.5rem;
+    border-bottom: solid 0.1rem  #707070;
+  }
+  
+  tbody tr{
+    background-color: white;
+  }
+
+  tbody tr:hover{
+    background-color: #ADDEF4;
+  }
+
+/* @media (max-width:600px){
+
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .insc-header{
+        margin: 1rem auto;
+    }
+    
+    .opcion button{
+        padding: 2rem;
+        font-size: 1rem;
+    }
+    .inscribir-conv label{
+        margin:0;    
+    }
+    .inscribir-conv label span{
+        font-size: 1.6rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;    
+    }
+
+    .inscribir-conv label input{
+        border-radius: 0.5rem;
+        padding: 0.8rem 0;
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    #insc-usuario button.inscribirse-btn{
+        font-size: 1rem;
+        margin-top: 1.6rem;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 1.6rem;
+    }
+
+    table{
+        font-size: 1.2rem;
+        table-layout:auto;
+        width: auto;
+    }
+
+    th{
+        padding: 0.8rem 0.5rem;
+        font-weight: bold;
+        border-bottom: solid 0.1rem  #707070;
+    }
+    td{
+        padding: 0.8rem;
+      }
+    .inscribir-conv table{
+        margin: 0;   
+    }
+}  */
