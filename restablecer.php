@@ -31,7 +31,6 @@
     <p>Ingresa tu correo electrónico para recibir un enlace de restablecimiento de contraseña.</p> <br>
         <div class="input-wrapper">
             <input type="email" placeholder="Ingrese su Correo"  maxlength="45">
-            <img class="input-icon" src="images/email.svg" alt="">
         </div>
         <input class="btn" type="submit" name="submit" value="Enviar correo de restablecimiento">
 </form>
