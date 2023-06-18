@@ -81,7 +81,7 @@
 			</div><!-- onclick js -->
 		</div><!-- fin carrusel -->
 
-	<script src="jsfile.js"></script><!-- Carrusel-->
+	<script src="./js/jsfile.js"></script><!-- Carrusel-->
 
 
 <br><br><br><br><br>

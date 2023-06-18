@@ -35,7 +35,7 @@
         <p class="link"><a href="restablecer.php" style="text-decoration: none;">¿Olvido su contraseña?</a></p>
         </form>
 </div>
-<script src="espacioblanco.js"></script>
+<script src="./js/espacioblanco.js"></script>
 
 </body>
 </html>

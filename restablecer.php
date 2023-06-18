@@ -36,6 +36,6 @@
         <input class="btn" type="submit" name="submit" value="Enviar correo de restablecimiento">
 </form>
 </div>
-<script src="espacioblanco.js"></script>
+<script src="./js/espacioblanco.js"></script>
 </body>
 </html>

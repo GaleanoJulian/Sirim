@@ -52,7 +52,7 @@
     <p class="link"><a href="login.php" style="text-decoration: none;">¿Ya tienes cuenta?</a></p>
 </form>
 </div>
-<script src="espacioblanco.js"></script>
+<script src="./js/espacioblanco.js"></script>
 
 <?php
 include("./conexion-y-logica/conexion_registro.php");

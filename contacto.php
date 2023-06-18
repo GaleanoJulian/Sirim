@@ -37,6 +37,6 @@
         <input type="submit" name="enviar" value="Enviar Mensaje" class="btn-enviar">
     </form>
 </div>
-<script src="espacioblanco.js"></script>
+<script src="./js/espacioblanco.js"></script>
 </body>
 </html>
