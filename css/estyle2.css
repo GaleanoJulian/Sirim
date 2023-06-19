@@ -281,6 +281,14 @@ form h1::after{
 	width: 50%;
   }
 
+  /* Estilo para el ancho del formulario de inicio de sesión */
+
+  form.inicio-form{
+	width: 30%;
+	margin-left: auto;
+	margin-right: auto;
+  }
+
 /* Fin  fomularios  */
 
 
