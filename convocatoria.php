@@ -16,7 +16,7 @@
                 <a href="index.php" class="logo">SIRIM</a>
             <nav>
                 <ul>
-                    <li><a href="login.php">Iniciar sesion</a></li>
+                    <li><a href="login.php">Iniciar sesión</a></li>
                     <li><a href="registro.php">Resgistrate</a></li>
             </nav>
         </header>
@@ -31,7 +31,7 @@
 
     <table style="width: 70%;" class="tabla1">
 <tr><th>
-</a><p style="width: 100%;"><br> La informacion sobre de las convocatorias y insciprciones saldra en los proximos dias proximos dias, te invitamos a que estes atento y a que  a que crees tu cuenta e inicies sesion.
+</a><p style="width: 100%;"><br>La información sobre de las convocatorias e inscripciones saldrá en los próximos días, te invitamos a que estés atento y a que crees tu cuenta e inicies sesión.
 <br> Las fechas son: <br> <br><input type="text"></p><a href="">
 </th></tr>
 </table>
@@ -39,8 +39,8 @@
 
 <table style="width: 70%;" class="tabla2">
     <tr><th>
-    </a><p style="width: 100%;"><br> Si quieres saber mas acerca de quienes somos o que es lo que hacemos, te invitamosa que le des clik a quienes somos.
-        <br> Quines somos:</p><BR><a href="quienessomos.php">QUIENES SOMOS</a>
+    </a><p style="width: 100%;"><br> Si quieres saber más acerca de quienes somos o que es lo que hacemos, te invitamos que le des clic al siguiente link, el cual te va a llevar a nuestra página quienes somos.
+        <br> Quienes somos:</p><BR><a href="quienessomos.php">QUIENES SOMOS</a>
     </th></tr>
     </table>
 </div>

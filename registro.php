@@ -16,7 +16,7 @@
             <a href="index.php" class="logo">SIRIM</a>
         <nav>
             <ul>
-                <li><a href="login.php">iniciar sesion</a></li>
+                <li><a href="login.php">Iniciar sesión</a></li>
                 <li><a href="registro.php">Resgistrate</a></li>
         </nav>
     </header>

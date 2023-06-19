@@ -16,7 +16,7 @@
 					<a href="index.php" class="logo">SIRIM</a>
 				<nav>
 					<ul>
-						<li><a href="login.php">iniciar sesion</a></li>
+						<li><a href="login.php">Iniciar sesión</a></li>
 						<li><a href="registro.php">Resgistrate</a></li>
 						<section class="buttons">
 							<a href="https://www.facebook.com/iglesiamenonitateusaquillo/?locale=es_LA" target=”_blank” class="fa-brands fa-facebook"></a>
@@ -55,7 +55,7 @@
 			<div class="myslide fade">
 				<div class="txt">
 					<h1> </h1>
-					<p> <br>Mejora lo ya que ya existe, perimitiendo a muchas mas presonas saber hacerca de este proceso y que sea mas facil a la hora de</p>
+					<p> <br>Mejora lo ya que ya existe, permitiendo a muchas más personas saber acerca de este proceso y que sea más fácil a la hora para ellos poseer esta gran ayuda</p>
 				</div>
 				<img src="img/foto3.jpg" style="width: 100%; height: 100%;">
 				
@@ -64,7 +64,7 @@
 			<div class="myslide fade">
 				<div class="txt">
 					
-					<p><br>crea un cuenta y forma parte de esta familia.</p>
+					<p><br>Crea un cuenta y forma parte de esta familia.</p>
 				</div>
 				<img src="img/foto4.jpg" style="width: 100%; height: 100%;">
 			</div>
@@ -87,7 +87,7 @@
 <br><br><br><br><br>
 	<!--   Tarjetas-->
 <center>
-	<h6 style="color: rgb(20, 20, 20);">Te puede intesar</h6>
+	<h6 style="color: rgb(20, 20, 20);">Te puede interesar</h6>
 </center>
 <div class="title-cards">
 	<h2></h2>
@@ -100,7 +100,7 @@
 </figure><br><br><br>
 <div class="contenido-card">
 	<h3>Quienes somos</h3>
-	<p>somos una iglesia que tiene como lavor ayudar al progimo.</p>
+	<p>Somos una iglesia que tiene como labor ayudar al prójimo.</p>
 	<a href="quienessomos.php">Leer Más</a>
 </div>
 </div>
@@ -110,7 +110,7 @@
 </figure><br><br><br>
 <div class="contenido-card">
 	<h3>Convocatorias</h3>
-	<p>Ingesa para saber cunado son las convocatorias e incripciones de las ayudas.</p>
+	<p>Ingresa para saber cuándo son las convocatorias e inscripciones de las ayudas.</p>
 	<a href="convocatoria.php">Leer Más</a>
 </div>
 </div>
@@ -119,8 +119,8 @@
 	<img src="img/contacto.png">
 </figure><br><br><br>
 <div class="contenido-card">
-	<h3>contactanos</h3>
-	<p>Si tienes alguna pregunta o quieres saber algo de mas, no dudes y mandanos un mensaje</p>
+	<h3>Contáctanos</h3>
+	<p>Si tienes alguna pregunta o quieres saber algo de más, no dudes y mándanos un mensaje</p>
 	<a href="contacto.php">Leer Más</a>
 </div>
 </div>
@@ -131,7 +131,7 @@
 	<center>
 		<table style="width: 50%;">
 			<tr><th>
-				<h6 style="color: rgb(20, 20, 20);">Donde esta ubicada</h6>
+				<h6 style="color: rgb(20, 20, 20);">Donde está ubicada</h6>
 				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.850953984138!2d-74.07301782610799!3d4.620666842348463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99840d8d1d8d%3A0x8ad363d2b23db39!2sAc.%2032%20%2314-18%2C%20Bogot%C3%A1!5e0!3m2!1ses-419!2sco!4v1683774640864!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 				<tr><th>
 			</table>
@@ -168,9 +168,12 @@
 			<p style="color: aliceblue;"center>
 				<br>
 				<BR><br><br><br>
-				Todos los derechos al gaez numero 1 de la ficha 2620597</p>	
-				<br><p style="color: aliceblue;"center>nombres  </p>
-				<br><p style="color: aliceblue;"center>Proyecto para la sustentacion final. </p>
+				Todos los derechos al gaez número 1 de la ficha 2620597</p>	
+				<br><p style="color: aliceblue;"center> Daniela Alexandra Ardila Viasus <br>Linda Patricia Corredor Medina <br>Julian David Forero Galeano </p>
+
+
+ 
+				<br><p style="color: aliceblue;"center>Proyecto para la sustentacion final</p>
 
 				<BR><br><br><br>
 					<tr><th>

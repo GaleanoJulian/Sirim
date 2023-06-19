@@ -15,7 +15,7 @@
             <a href="index.php" class="logo">SIRIM</a>
         <nav>
             <ul>
-                <li><a href="login.php">iniciar sesion</a></li>
+                <li><a href="login.php">Iniciar sesión</a></li>
                 <li><a href="registro.php">Resgistrate</a></li>
         </nav>
     </header>
@@ -30,8 +30,8 @@
     <form action="">
         <h1>contactanos</h1>
         <input type="email" placeholder="Ingrese su Correo"  maxlength="45">
-        <input type="text" onkeypress="return soloLetras(event)" placeholder="ingrese sus nombres" maxlength="25" minlength="3" />
-        <input type="text" placeholder="Ingrese su numero telefonico " maxlength="10" minlength="7" onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
+        <input type="text" onkeypress="return soloLetras(event)" placeholder="Ingrese sus nombres" maxlength="25" minlength="3" />
+        <input type="text" placeholder="Ingrese su número telefónico " maxlength="10" minlength="7" onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
         <input type="asunto" placeholder="Escriba el asunto" maxlength="20" minlength="10">
         <textarea name="mensaje" placeholder="Tu Mensaje..." maxlength="250" minlength="50"></textarea>
         <input type="submit" name="enviar" value="Enviar Mensaje" class="btn-enviar">

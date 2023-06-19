@@ -19,7 +19,7 @@
 					<a href="index.php" class="logo">SIRIM</a>
 				<nav>
 					<ul>
-						<li><a href="login.php">iniciar sesion</a></li>
+						<li><a href="login.php">Iniciar sesión</a></li>
 						<li><a href="registro.php">Resgistrate</a></li>
 					</ul>
 				</nav>
@@ -38,15 +38,14 @@
 
 <table class="tab" style="width: 40%;" >
 <td>
-<th><p   style="width: 100; 	font-weight:  bolder;
-	" >La Iglesia Cristiana Menonita de Colombia, ubicada en la Calle 32 # 14-42 piso 2, en la localidad  de Teusaquillo de la ciudad de Bogotá (ver Figura 1), es una empresa que fue constituida como  una Sociedad por Acciones Simplificada (S.A.S.) identificada con NIT 8300395398, que se dedica  a actividades de asociaciones religiosas. Dentro de sus actividades, realiza labores humanitarias  encaminadas a ayudar a personas vulnerables, incluyendo personas migrantes, a través de su  Comité de Justicia y Paz.</p></tr>
+<th><p   style="width: 100; 	font-weight:  bolder;">La Iglesia Cristiana Menonita de Colombia, ubicada en la Calle 32 # 14-42, piso 2, en la localidad de Teusaquillo de la ciudad de Bogotá (ver Figura 1), es una empresa que fue constituida como una Sociedad por Acciones Simplificada (S.A.S.) identificada con NIT 8300395398, que se dedica a actividades de asociaciones religiosas. Dentro de sus actividades, realiza labores humanitarias encaminadas a ayudar a personas vulnerables, incluyendo personas migrantes, a través de su Comité de Justicia y Paz.</p></tr>
 </th> </td>
 </table>
 <hr width=50%   size=10 color="#000000" class="linea">
 
 <table class="tab2" style="width: 40%;" >
     <td>
-    <th><p class="texto1"  style="width: 100;  	font-weight:  bolder;" >Dentro de sus actividades, el Comité entrega aproximadamente entre 20 y 40 mercados todos  los meses en un día que se acuerda entre los miembros previamente, los cuales son obtenidos  a partir de las donaciones que recibe. En las entregas intervienen las personas que son miembros  del Comité y voluntarios que se han ofrecido con esta labor y otras más que realiza la iglesia. <br>Te invitamos a que seas parete de esta familia registrandote e iniciando sesion. </p></tr>
+    <th><p class="texto1"  style="width: 100;  	font-weight:  bolder;">Dentro de sus actividades, el Comité entrega aproximadamente entre 20 y 40 mercados todos los meses en un día que se acuerda entre los miembros previamente, los cuales son obtenidos a partir de las donaciones que recibe. En las entregas intervienen las personas que son miembros del Comité y voluntarios que se han ofrecido con esta labor y otras más que realiza la iglesia. <br>Te invitamos a que seas parte de esta familia registrándote e iniciando sesión.</p></tr>
     </th> </td>
     </table>
 
