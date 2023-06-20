@@ -41,27 +41,9 @@
             <div class="separator"></div>
 
             <div class="item">
-                <a href="./convocatoria.php">
-                    <div class="icon"><img src="images/convocatoria.png" id="iconconv" alt=""></div>
-                    <div class="title"><span>Convocatorias</span></div>
-                </a>
-            </div>
-            
-            <div class="separator"></div>
-
-            <div class="item">
                 <a href="./inscripcion-admin_volunt.html">
                     <div class="icon"><img src="images/inscripcion.png" alt=""></div>
                     <div class="title"><span>Inscripciones</span></div>
-                </a>
-            </div>
-            
-            <div class="separator"></div>
-
-            <div class="item">
-                <a href="./tarjetas-inventario.php">
-                    <div class="icon"><img src="images/inventario.png" alt=""></div>
-                    <div class="title"><span>Inventario</span></div>
                 </a>
             </div>
             
@@ -77,6 +59,24 @@
             <div class="separator"></div>
 
             <div class="item">
+                <a href="./convocatoria.php">
+                    <div class="icon"><img src="images/convocatoria.png" id="iconconv" alt=""></div>
+                    <div class="title"><span>Convocatorias</span></div>
+                </a>
+            </div>
+            
+            <div class="separator"></div>
+
+            <div class="item">
+                <a href="./tarjetas-inventario.php">
+                    <div class="icon"><img src="images/inventario.png" alt=""></div>
+                    <div class="title"><span>Inventario</span></div>
+                </a>
+            </div>
+            
+            <div class="separator"></div>
+
+            <div class="item">
                 <a href="lista-compras.html">
                     <div class="icon"><img src="images/listacompras.png" alt=""></div>
                     <div class="title"><span>Lista de compras</span></div>
@@ -85,6 +85,16 @@
             </div>
             
             <div class="separator"></div>
+
+            <div class="item">
+                <a href="#">
+                    <div class="icon"><img src="images/gestion_user.png" alt=""></div>
+                    <div class="title"><span>Gestión de usuarios</span></div>
+                </a>
+            </div>
+            
+            <div class="separator"></div>
+
         </div>
         <input class="btn" type="button" value="Cerrar sesión"/><br><br>
     </header>
