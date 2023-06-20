@@ -9,6 +9,7 @@
     <script src="./js/regist_password.js"></script> <!-- Script para comprobar que las contraseñas son iguales en ambos campos al hacer el registro-->
     <script src="./js/regist_birth-date_valida.js"></script> <!-- Script para validar la edad de registro, no menores de edad, no mayores de 110 años -->
     <script src="./js/regist_validar_campos.js"></script> <!-- Script para poner un spam bajo los campos, indicando que son obligatorios -->
+    <script src="./js/espacioblanco.js"></script> <!-- Script para evitar poner caracteres de números y especiales en nombres y apellidos -->
     <title>Formulario de Registro</title>
 </head>
 <body>
@@ -75,7 +76,7 @@
                 </select>
                 <span class="error-message">Este campo es obligatorio</span>
             </div>
-            <input type="text" class="adaptar" name="doc_number" placeholder="Número de documento" maxlength="15" minlength="6" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required />
+            <input type="text" class="adaptar" name="doc_number" placeholder="Número de documento" maxlength="15" minlength="6" required />
             <span class="error-message">Este campo es obligatorio</span>
             </div>       
         </div>
