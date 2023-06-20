@@ -108,27 +108,37 @@ header.abajo ul li a{
 	/* finMENU */
 
      /*  convocatorias  */
-	.tabla1{
-		position: relative;
-		top: 300px;
-		left: 150px;
-		box-shadow: 0 1rem 1rem  rgba(0, 0, 0, 0.3);
-	}
-	.tabla2{
-		position: absolute;
-		top: 500px;
-		left: 150px;
-		box-shadow: 0 1rem 1rem  rgba(0, 0, 0, 0.3);
+	
+	 .tabla_1columna{
+		margin: 5% 20%;
+	 }
+
+	.texto-celdas{
+		background-color: rgba(255,255,255,0.8);
+		padding:10px;
+		border-radius: 0.8rem;
 	}
 
-	.numero3{
-		animation: none; 
-		position: absolute; 	
-		width: 50%;
-		top: 500px;
-		height: 50%;
-		right: 100px;  
+	.texto-celdas2{
+		background-color: rgba(255,255,255,0.8);
+		padding:10px;
+		border-radius: 0.8rem;
+		text-align: justify;
 	}
+	
+	.texto-celdas p{
+		color:#2c3e50;
+		font-weight: bold;
+		font-size: 0.8rem;
+	}
+	input.fechas-convocatoria{
+		background:none;
+		font-size: 20px;
+		font-weight: bold;
+		text-align: center;
+	}
+
+
 	 /*  convocatorias  */
 
      /* fomularios  */

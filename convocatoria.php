@@ -9,40 +9,76 @@
     <link rel="stylesheet" href="./css/estyle2.css">
 </head>
 <body>
-    <div class="container">
-    <!-- menu -->
-    <section class="zona1">
-        <header>
-                <a href="index.php" class="logo">SIRIM</a>
-            <nav>
-                <ul>
-                    <li><a href="login.php">Iniciar sesión</a></li>
-                    <li><a href="registro.php">Resgistrate</a></li>
-            </nav>
-        </header>
-        <section>
-            <script type="text/javascript">
-                window.addEventListener("scroll", function(){
-                    var header = document.querySelector("header");
-                    header.classList.toggle("abajo",window.scrollY>0);
-                })
-            </script>
-        <!--Fin  menu -->
+    <header class="fixed-nav">
+            <a href="index.php" class="logo">SIRIM</a>
+        <nav>
+            <ul>
+                <li><a href="login.php">Iniciar sesión</a></li>
+                <li><a href="registro.php">Resgistrate</a></li>
+            </ul>
+        </nav>
+        <script type="text/javascript">
+    		window.addEventListener("scroll", function(){
+    		var header = document.querySelector("header");
+        	header.classList.toggle("abajo",window.scrollY>0);
+   			})
+		</script>
+    </header>
 
-    <table style="width: 70%;" class="tabla1">
-<tr><th>
-</a><p style="width: 100%;"><br>La información sobre de las convocatorias e inscripciones saldrá en los próximos días, te invitamos a que estés atento y a que crees tu cuenta e inicies sesión.
-<br> Las fechas son: <br> <br><input type="text"></p><a href="">
-</th></tr>
-</table>
+<main>
+
+    <table class="tabla_1columna">
+        <tr>
+            <td>
+                <div class="texto-celdas">
+                    Te invitamos a conocer las fechas importantes relacionadas con nuestra
+                    próxima entrega: <br><br>
+                    <div>
+                        <label>Próxima entrega de mercados: </label> <br><br>
+                        <input class="fechas-convocatoria" type="text"/>
+                    </div>
+                    <div>
+                        <label>Inicio de las inscripciones: </label> <br><br>
+                        <input class="fechas-convocatoria" type="text"/>
+                    </div>
+                    <div>
+                        <label>Fin de las inscripciones: </label> <br><br>
+                        <input class="fechas-convocatoria" type="text"/>
+                    </div>
+                    Si deseas inscribirte, por favor inicia tu sesión y realiza 
+                    el proceso de inscripción: <br><br>
+
+                    <button onclick="window.location.href = './login.php'">Iniciar sesión</button>
 
 
-<table style="width: 70%;" class="tabla2">
-    <tr><th>
-    </a><p style="width: 100%;"><br> Si quieres saber más acerca de quienes somos o que es lo que hacemos, te invitamos que le des clic al siguiente link, el cual te va a llevar a nuestra página quienes somos.
-        <br> Quienes somos:</p><BR><a href="quienessomos.php">QUIENES SOMOS</a>
-    </th></tr>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+			<td>
+			<br><br>
+			</td>
+		</tr>
+
+        <tr>
+            <td>
+                <div class="texto-celdas2">
+                Si quieres saber más acerca de quienes somos y de 
+                lo que hacemos, te invitamos a ver esta información 
+                en nuestra página de "Quienes somos" al cual puedes
+                acceder con el siguiente botón:<br><br>
+                <button onclick="window.location.href = './quienessomos.php'">Quienes somos</button>
+                </div>
+            </td>
+        </tr>
     </table>
-</div>
+
+</main>
+
+
+<?php
+        include("./conexion-y-logica/conexion_convocatoria-index.php");
+    ?>
 </body>
 </html>
