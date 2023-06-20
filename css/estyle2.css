@@ -378,5 +378,7 @@ span.error-message{ /*span de que las edades no están en el rango*/
 	color: #c35628; 
 	display: none; 
 	font-weight:bold;
+	font-size: 12px;
+	margin-bottom: 15px;
 }
 
