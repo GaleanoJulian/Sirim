@@ -63,7 +63,7 @@
 			<div class="myslide fade">
 				<div class="txt">
 					
-					<p><br>Entérate de nuestro proceso, crea un cuenta y forma parte de esta familia.</p>
+					<p><br>Entérate de nuestro proceso, crea una cuenta y forma parte de esta familia.</p>
 				</div>
 				<img src="img/foto4.png" style="width: 100%; height: 100%;">
 			</div>
