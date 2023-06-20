@@ -39,6 +39,20 @@ function validarFormulario() {
         }
     }
 
+    if (doc_type.value === "Seleccione") {
+        mostrarError(doc_type, "Es obligatorio indicar el tipo de documento de identidad");
+        formularioValido = false;
+    } else {
+        ocultarError(doc_type);
+    }
+
+    if (gender.value === "Seleccione") {
+        mostrarError(gender, "Es obligatorio indicar un género");
+        formularioValido = false;
+    } else {
+        ocultarError(gender);
+    }
+
     return formularioValido;
 }
 

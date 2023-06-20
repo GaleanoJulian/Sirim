@@ -67,7 +67,7 @@
             <div class="column">             
             <div class="select-box adaptar">
             <select name="doc_type" class="Tipodocumento" required>
-                    <option value="Seleccione" hidden>Tipo de documento</option>
+                    <option value="Seleccione" disabled selected hidden>Tipo de documento</option>
                     <option value="Cedula">CEDULA</option>
                     <option value="Cedula">PPT</option>
                     <option value="Cedula">PIP</option>
@@ -76,8 +76,10 @@
                 </select>
                 <span class="error-message">Este campo es obligatorio</span>
             </div>
-            <input type="text" class="adaptar" name="doc_number" placeholder="Número de documento" maxlength="15" minlength="6" required />
-            <span class="error-message">Este campo es obligatorio</span>
+            <div class="input-box adaptar">
+                <input type="text" class="adaptar" name="doc_number" placeholder="Número de documento" maxlength="15" minlength="6" required />
+                <span class="error-message">Este campo es obligatorio</span>
+            </div>
             </div>       
         </div>
 
@@ -87,7 +89,7 @@
                 <label>Género</label>
                 <div class="select-box">
                 <select class="Tipodocumento" name="gender" required>
-                    <option value="Seleccione" hidden>Seleccione su género</option>
+                    <option value="Seleccione" disabled selected hidden>Seleccione su género</option>
                     <option value="Masculino">Hombre</option>
                     <option value="Femenino">Mujer</option>
                     <option value="Otro">Otro</option>
