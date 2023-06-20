@@ -116,7 +116,7 @@
 
         <div class="input-box">
             <label>Dirección</label>
-            <input type="text" name="direction" placeholder="Ingrese su dirección de residencia" maxlength="50" required />
+            <input type="text" name="direction" placeholder="Ingrese su dirección de residencia" maxlength="50" minlenght="8" required />
             <span class="error-message">Este campo es obligatorio</span>
         </div>  
    
