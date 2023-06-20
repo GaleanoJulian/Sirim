@@ -382,3 +382,12 @@ span.error-message{ /*span de que las edades no están en el rango*/
 	margin-bottom: 15px;
 }
 
+/*Formulario restablecer contraseña*/
+
+form.form-restablecer{
+	margin: auto 33%;
+
+}
+main.restablecer{
+	height: 100vh;
+}
