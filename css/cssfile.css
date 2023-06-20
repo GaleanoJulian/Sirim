@@ -78,7 +78,7 @@ header ul li a{
 	width: 100%;
 	height: 100vh;
 	background-size: cover;
-background-position: center center
+	background-position: center center
 
 }
 
@@ -474,6 +474,48 @@ textarea{
 	transform: translateY(0);
   }
   /* Fin Boton subir que aparece  */
+
+  /* Estilo para la página de quienes somos */
+
+  img.img_tabla{
+	animation: none;
+	transform: none;
+	max-width: 100%;
+	width: 100%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 0.8rem;
+  }
+  .zona2{
+	position: relative;
+	font-family: Arial, Helvetica, sans-serif;
+	width: 100%;
+	background-size: cover;
+	background-position: center center
+
+}
+
+main.quienes-somos-main{
+	margin: 3.5% 10%;
+}
+
+td.q-s-columna {
+	width: 50%;
+	padding: 10px;
+}
+
+.texto-celdas{
+	background-color: rgba(255,255,255,0.8);
+	padding:10px;
+	border-radius: 0.8rem;
+}
+
+.texto-celdas p{
+	color:#2c3e50;
+	font-weight: bold;
+	font-size: 0.8rem;
+}
 
 
  
