@@ -34,7 +34,7 @@
 					})
 				</script>
 				<!--Fin  menu -->
-				<br><br><br><br><br><br>
+				<br><br><br><br><br><br><br>
 				
 
 <!-- inicio carrusel -->
@@ -43,30 +43,29 @@
 			<div class="myslide fade">
 				<div class="txt">
 				</div>
-				<img src="img/foto1.jpg" style="width: 100%; height: 100%;" >
+				<img src="img/foto1.png" style="width: 100%; height: 100%;" >
 			</div>
 			<div class="myslide fade">
 				<div class="txt">
-					<p><br>El comité de justicia y paz de la iglesia menonita ubicada en la ciudad de Bogotá en la localidad de Teusaquillo, realiza labores humanitarias para las personas vulnerables, el comité entrega cierta cantidad de mercados todos los meses en colaboración con personas voluntarias.</p>
+					<p>La iglesia menonita ayuda a quienes más lo necesitan entregando algunos mercados a varias familias cada mes, en colaboración con personas voluntarias.</p>
 				</div>
-				<img src="img/foto2.jpg" style="width: 100%; height: 100%;">
+				<img src="img/foto2.png" style="width: 100%; height: 100%;">
 			</div>
 			
 			<div class="myslide fade">
-				<div class="txt">
-					<h1> </h1>
-					<p> <br>Mejora lo ya que ya existe, permitiendo a muchas más personas saber acerca de este proceso y que sea más fácil a la hora para ellos poseer esta gran ayuda</p>
+				<div class="txt">				
+					<p>Queremos ayudar a más personas, con SIRIM mejoramos la experiencia y equidad para el acceso a las ayudas que brinda la iglesia. </p>
 				</div>
-				<img src="img/foto3.jpg" style="width: 100%; height: 100%;">
+				<img src="img/foto3.png" style="width: 100%; height: 100%;">
 				
 			</div>
 			
 			<div class="myslide fade">
 				<div class="txt">
 					
-					<p><br>Crea un cuenta y forma parte de esta familia.</p>
+					<p><br>Entérate de nuestro proceso, crea un cuenta y forma parte de esta familia.</p>
 				</div>
-				<img src="img/foto4.jpg" style="width: 100%; height: 100%;">
+				<img src="img/foto4.png" style="width: 100%; height: 100%;">
 			</div>
 			
 			<!-- onclick js -->
@@ -96,7 +95,7 @@
 
 <div class="card">
 <figure>
-	<img src="img/foto3.jpg" >
+	<img src="img/iglesia.jpg" >
 </figure><br><br><br>
 <div class="contenido-card">
 	<h3>Quienes somos</h3>
@@ -167,15 +166,24 @@
 		<tr><th>
 			<p style="color: aliceblue;"center>
 				<br>
-				<BR><br><br><br>
-				Todos los derechos al gaez número 1 de la ficha 2620597</p>	
-				<br><p style="color: aliceblue;"center> Daniela Alexandra Ardila Viasus <br>Linda Patricia Corredor Medina <br>Julian David Forero Galeano </p>
+				<br><br>
+				Elaborado por GAES 1 
+				<br><br>
+				Programa de formación: Técnico en programación de software<br>
+				Ficha de caracterización: 2620597</p>	
+				<br><p style="color: aliceblue;"center>
+				Todos los derechos a <br>
+				<br>Daniela Alexandra Ardila Viasus 
+				<br>Linda Patricia Corredor Medina 
+				<br>Julian David Forero Galeano </p>
 
 
  
-				<br><p style="color: aliceblue;"center>Proyecto para la sustentacion final</p>
+				<br><p style="color: aliceblue;"center>Proyecto para la sustentacion final.</p>
+				<br>Bogotá D.C. 
+				<br>Junio de 2023
 
-				<BR><br><br><br>
+				<br>
 					<tr><th>
 		</table>	<!-- FIN Y DERECHOS ETC  -->
 		</div>

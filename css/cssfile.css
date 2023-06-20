@@ -5,7 +5,7 @@
 	font-family: sans-serif;
 }
 body{
-    background: linear-gradient(to right, #CD7A57, #AFE0F6);
+    background: linear-gradient(to right, #3C839D, #3FABDD, #ADDEF4,#dbcda8,#dbbf73, #CD7A57);
 }
 	  
 /* MENU */
@@ -97,7 +97,7 @@ header.abajo ul li a{
 	background: #2c3e50; 
 }
 .myslide{
-	height: 700px; /* largo */
+	height: 480px; /* largo */
 	display: none;
 	overflow: hidden;
 }
@@ -165,7 +165,6 @@ header.abajo ul li a{
 .txt{
 	position: absolute;
 	color: #fff;
-	letter-spacing: 2px;
 	line-height: 35px;
 	top: 40%;
 	left: 15%;
@@ -194,7 +193,9 @@ header.abajo ul li a{
 }
 .txt p{
 	font-weight: bold;
-	font-size: 20px;
+	font-size: 35px;
+	margin-left: 5%;
+	margin-right: 20%;
 }
 /*imags*/
 img{
@@ -261,7 +262,7 @@ img{
 
    /* MAPA */
 h6{color: #000000; 
-	font-size: 50px;   
+	font-size: 40px;   
 	margin-bottom: 20px;
 }   /* MAPA */
 
@@ -296,7 +297,9 @@ h6{color: #000000;
 	transform: translateY(-3%);
 }
 .card img{
-	width: 100%;
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
 	height: 210px;
 	transform: scale(1.5, 1.5);
 	-webkit-animation-name: none;
@@ -452,11 +455,12 @@ textarea{
 
 /* Boton que sube aparece  */
 .btn-scrolltop {
-	width: 80px;
+	width: 60px;
+	height: 60px;
 	position: fixed;
 	bottom: 20px;
 	right: 20px;
-	padding: 15px 20px;
+	padding: 0 20px;
 	background: rgb(167, 158, 158);
 	color: white;
 	border: 1px solid white;
