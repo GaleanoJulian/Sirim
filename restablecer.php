@@ -7,6 +7,7 @@
     <title>Restablecer contraseña</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/estyle2.css">
+    <script src="./js/regist_validar_campos.js"></script> <!-- Script para poner un spam bajo los campos, indicando que son obligatorios -->
     <script src="./js/espacioblanco.js"></script>
 </head>
 </body>
@@ -24,10 +25,13 @@
     <form class="form-restablecer" method="post">
     <h2>¿Olvidaste tu contraseña?</h2><br>
     <p>Ingresa tu correo electrónico para recibir un enlace de restablecimiento de contraseña.</p> <br>
-        <div class="input-wrapper">
-            <input type="email" placeholder="Ingrese su Correo"  maxlength="45">
+    <div class="input-box">
+            <label>Correo electrónico</label>
+            <input type="email" name="email" placeholder="Ingrese su correo electrónico" maxlength="50" required />
+            <span class="error-message">Este campo es obligatorio</span>
         </div>
         <input class="btn" type="submit" name="submit" value="Enviar correo de restablecimiento">
+
     </form>
     </main>
 

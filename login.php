@@ -32,7 +32,7 @@
 
             <div class="input-box">
                 <label>Contraseña</label>
-                <input type="password" name="password" id="password" placeholder="Ingrese su contraseña" maxlength="50" required onkeyup="validarContraseña()" />
+                <input type="password" name="password" id="password" placeholder="Ingrese su contraseña" minlength="10" maxlength="50" required onkeyup="validarContraseña()" />
                 <span class="error-message">Este campo es obligatorio</span>
             </div>
        

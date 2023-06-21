@@ -49,13 +49,13 @@
         <div class="column">
         <div class="input-box adaptar">
             <label>Contraseña</label>
-            <input type="password" name="password" id="password" placeholder="Ingrese su contraseña" maxlength="50" required onkeyup="validarContraseña()" />
+            <input type="password" name="password" id="password" placeholder="Ingrese su contraseña" maxlength="50" minlength="10"required onkeyup="validarContraseña()" />
             <span class="error-message">Este campo es obligatorio</span>
         </div>
 
         <div class="input-box adaptar">
             <label>Confirmación</label>
-            <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirme su contraseña" maxlength="50" required onkeyup="validarContraseña()" />
+            <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirme su contraseña" maxlength="50" minlength="10" required onkeyup="validarContraseña()" />
             <span id="password_error">Las contraseñas no coinciden</span>
             <span class="error-message">Este campo es obligatorio</span>
         </div>
