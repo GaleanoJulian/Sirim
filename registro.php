@@ -68,11 +68,12 @@
             <div class="select-box adaptar">
             <select name="doc_type" class="Tipodocumento" required>
                     <option value="Seleccione" disabled selected hidden>Tipo de documento</option>
-                    <option value="Cedula">CEDULA</option>
-                    <option value="Cedula">PPT</option>
-                    <option value="Cedula">PIP</option>
-                    <option value="Cedula">PEP</option>
-                    <option value="Cedula">IME</option>
+                    <option value="Cedula_ciudadania">Cédula de ciudadanía</option>
+                    <option value="Cedula_extranjeria">Cédula de extranjería</option>
+                    <option value="Pasaporte">Pasaporte</option>
+                    <option value="Permiso_proteccion_temporal">PPT</option>
+                    <option value="Permiso_ingreso_permanencia">PIP</option>
+                    <option value="Permiso_especial_permanencia">PEP</option>
                 </select>
                 <span class="error-message">Este campo es obligatorio</span>
             </div>
@@ -90,8 +91,8 @@
                 <div class="select-box">
                 <select class="Tipodocumento" name="gender" required>
                     <option value="Seleccione" disabled selected hidden>Seleccione su género</option>
-                    <option value="Masculino">Hombre</option>
-                    <option value="Femenino">Mujer</option>
+                    <option value="Hombre">Hombre</option>
+                    <option value="Mujer">Mujer</option>
                     <option value="Otro">Otro</option>
                 </select>
                 <span class="error-message">Este campo es obligatorio</span>
