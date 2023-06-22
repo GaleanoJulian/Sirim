@@ -1,3 +1,18 @@
+<?php
+//Seguridad de sesiones paginación
+
+session_start(); //Es para iniciar la sesión
+error_reporting(0); //Para que no muestre el reporte de error
+$varsesion= $_SESSION['email']; // una variable para agarrar el inicio de sesión que se hace por metodo post en email
+
+if($varsesion==null || $varsesion==''){ //un if para preguntar en donde si la variable es nula o vacía
+    header ("location:../login.php"); // que me redirija a la página de login
+    die(); //y después destruya la sesión
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +41,20 @@
 
         <div id="profile">
             <div id="photo"><img src="images/profilephoto.png" alt="Foto del perfil de usuario"></div>
-            <div id="name"><span>Daniela Ardila</span></div>
+            <div id="name"><span>
+            <?php
+    session_start();
+    // Verificar si la sesión está iniciada
+    if(isset($_SESSION['email'])) {
+        // Mostrar nombre y apellidos
+        echo $_SESSION['name'] . " " . $_SESSION['last_name'];
+    } else {
+        // Redirigir a la página de inicio de sesión si la sesión no está iniciada
+        header("Location: ../login.php");
+        exit();
+    }
+?>
+            </span></div>
         </div>
 
         <div id="menu-items">
@@ -96,11 +124,22 @@
             <div class="separator"></div>
 
         </div>
-        <input class="btn" type="button" value="Cerrar sesión"/><br><br>
+        <input class="btn" type="button" value="Cerrar sesión" onclick="window.location.href='./cerrar_sesion.php'"/><br><br>
     </header>
     <main class="main-container">
         <div class="saludo-container">
-            <h1>¡Bienvenido!</h1>
+            <h1><?php
+    session_start();
+    // Verificar si la sesión está iniciada
+    if(isset($_SESSION['email'])) {
+        // Mostrar nombre y apellidos
+        echo "¡Hola " . $_SESSION['name'] . " " . $_SESSION['last_name'] . "!";
+    } else {
+        // Redirigir a la página de inicio de sesión si la sesión no está iniciada
+        header("Location: ../login.php");
+        exit();
+    }
+?></h1>
         </div>
         
     </main>

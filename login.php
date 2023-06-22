@@ -20,7 +20,7 @@
     </header>
 
     <main>
-    <form method="post" class="inicio-form">
+    <form action="./conexion-y-logica/conexion_login.php" method="post" class="inicio-form">
             
         <h1>Iniciar Sesión</h1>
 
@@ -32,7 +32,7 @@
 
             <div class="input-box">
                 <label>Contraseña</label>
-                <input type="password" name="password" id="password" placeholder="Ingrese su contraseña" minlength="10" maxlength="50" required onkeyup="validarContraseña()" />
+                <input type="password" name="password" id="password" placeholder="Ingrese su contraseña" minlength="8" maxlength="50" required onkeyup="validarContraseña()" />
                 <span class="error-message">Este campo es obligatorio</span>
             </div>
        
