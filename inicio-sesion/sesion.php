@@ -84,27 +84,27 @@ if($varsesion==null || $varsesion==''){ //un if para preguntar en donde si la va
                 </a>
             </div>
             
-            <div class="separator"></div>
+            <div class="separator <?php if ($id_rol != 1 && $id_rol != 2) echo 'hidden'; ?>" id="convocatoria" ></div>
 
-            <div class="item">
+            <div class="item <?php if ($id_rol != 1 && $id_rol != 2) echo 'hidden'; ?>" id="convocatoria">
                 <a href="./convocatoria.php">
                     <div class="icon"><img src="images/convocatoria.png" id="iconconv" alt=""></div>
                     <div class="title"><span>Convocatorias</span></div>
                 </a>
             </div>
             
-            <div class="separator"></div>
+            <div class="separator <?php if ($id_rol != 1 && $id_rol != 2) echo 'hidden'; ?>" id="convocatoria"></div>
 
-            <div class="item">
+            <div class="item <?php if ($id_rol != 1 && $id_rol != 2) echo 'hidden'; ?>" id="inventario">
                 <a href="./tarjetas-inventario.php">
                     <div class="icon"><img src="images/inventario.png" alt=""></div>
                     <div class="title"><span>Inventario</span></div>
                 </a>
             </div>
             
-            <div class="separator"></div>
+            <div class="separator <?php if ($id_rol != 1 && $id_rol != 2) echo 'hidden'; ?>" id="convocatoria"></div>
 
-            <div class="item">
+            <div class="item <?php if ($id_rol != 1 && $id_rol != 2) echo 'hidden'; ?>" id="lista_compras">
                 <a href="lista-compras.html">
                     <div class="icon"><img src="images/listacompras.png" alt=""></div>
                     <div class="title"><span>Lista de compras</span></div>
@@ -112,9 +112,9 @@ if($varsesion==null || $varsesion==''){ //un if para preguntar en donde si la va
                     
             </div>
             
-            <div class="separator"></div>
+            <div class="separator <?php if ($id_rol != 1 && $id_rol != 2) echo 'hidden'; ?>" id="convocatoria"></div>
 
-            <div class="item">
+            <div class="item <?php if ($id_rol != 1 && $id_rol != 2) echo 'hidden'; ?>" id="gestion_user">
                 <a href="#">
                     <div class="icon"><img src="images/gestion_user.png" alt=""></div>
                     <div class="title"><span>Gestión de usuarios</span></div>
