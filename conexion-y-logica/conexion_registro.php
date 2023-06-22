@@ -32,7 +32,7 @@
                 $followingdatarol = $id_rolQuery->fetch_assoc(); //Obtener la consulta anterior en forma de array asociativo, es decir, asocia id_login con la columna que le indique
                 $id_rol = $followingdatarol['id']; //Obtiene el valor asociado a la columna id, en este caso el valor que buscamos
 
-                $consulta1="INSERT INTO usuario (`e-mail`, password, id_rol) /*colocar id_rol*/
+                $consulta1="INSERT INTO usuario (correo, password, id_rol) /*colocar id_rol*/
                 VALUES('$email','$password', '$id_rol')";
                 $resultado1=mysqli_query($conection, $consulta1);
 
@@ -45,8 +45,6 @@
                 $anioNacimiento = $fecha_parts[0];
                 $mesNacimiento = $fecha_parts[1];
                 $diaNacimiento = $fecha_parts[2];
-
-                echo "$diaNacimiento, $mesNacimiento, $anioNacimiento";
 
                 $consulta2="INSERT INTO info_usuario(nombres, apellidos, tipo_doc_id, doc_identidad, genero, dia_nacimiento, mes_nacimiento, anio_nacimiento, telefono, direccion, fecha_ingreso, id_usuario)
                     VALUES('$name','$last_name','$doc_type','$doc_number','$gender','$diaNacimiento','$mesNacimiento','$anioNacimiento','$phone','$direction','$fecha_ingreso','$newid')";

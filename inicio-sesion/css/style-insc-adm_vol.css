@@ -5,7 +5,7 @@ body{
     justify-content: center;
 }
 .insc-header{
-    font-size: 1.6rem;
+
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -21,7 +21,7 @@ body{
         #ddbc60 25%,
         #CD7A57 100%);
         color:#555357;
-    font-size: 1.3rem;
+
     cursor: pointer;
     font-weight: bold;
     border-radius: 1rem;
@@ -50,7 +50,7 @@ main.inscription-main{
 }
 
 .inscribir-conv label span{
-    font-size: 2.5rem;
+
     margin-top: 2rem;
     margin-bottom: 1.6rem;
     text-align: center;
@@ -60,7 +60,7 @@ main.inscription-main{
     border-radius: 1rem;
     border-color: #707070;
     padding: 2.5rem 0;
-    font-size: 2.5rem;
+
     text-align: center;
 }
 
@@ -81,7 +81,7 @@ main.inscription-main{
 .select-box{
     position: relative;
     outline: none;
-    font-size: 2.5rem;
+
     border: 0.1rem solid;
     border-radius: 1rem;
     padding: 0 1rem;
@@ -91,10 +91,9 @@ main.inscription-main{
 
 .select-box select{
     height: 100%;
-    width: 70%;
     outline: none;
     border: none;
-    font-size: 2.5rem;
+
     background-color: white;
 }
 
@@ -105,7 +104,7 @@ main.inscription-main{
         #3FABDD 25%,
         #3C839D 100%);
         color:white;
-    font-size: 1.1rem;
+
     cursor: pointer;
     font-weight: bold;
     border-radius: 2.5rem;
@@ -124,6 +123,7 @@ main.inscription-main{
 section.inscribir-conv .cajabuscar{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 .cajabuscar{
     margin: 2rem 0;
@@ -144,7 +144,6 @@ table{
     border: solid;
     color: #2f2e30;
     font-size: 1.4rem;
-    table-layout: fixed;
     border-collapse: collapse;
     width: 40rem;
     margin-left: 25px;

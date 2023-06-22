@@ -7,7 +7,7 @@
         session_start();
         $_SESSION['email']=$usuario;
 
-        $verificacion="SELECT*FROM usuario INNER JOIN info_usuario ON info_usuario.id_usuario = usuario.id WHERE `e-mail`='$usuario' AND password='$password'";
+        $verificacion="SELECT*FROM usuario INNER JOIN info_usuario ON info_usuario.id_usuario = usuario.id WHERE correo='$usuario' AND password='$password'";
         $valido=mysqli_query($conection, $verificacion);
         $count = mysqli_num_rows($valido);
         $row = mysqli_fetch_array($valido);

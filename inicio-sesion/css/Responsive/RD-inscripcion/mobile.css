@@ -4,13 +4,11 @@
 }
     .opcion button{
         padding: 3rem;
-        font-size: 1rem;
     }
     .inscribir-conv label{
         margin:0;    
     }
     .inscribir-conv label span{
-        font-size: 2rem;
         font-weight: bold;
         margin-top: 1rem;
         margin-bottom: 1rem;    
@@ -19,11 +17,9 @@
     .inscribir-conv label input{
         border-radius: 0.5rem;
         padding: 0.8rem 0;
-        font-size: 2rem;
     }
 
     #insc-usuario button.inscribirse-btn{
-        font-size: 2.2rem;
         margin-top: 2rem;
         margin-left: 10%;
         margin-right: 10%;
@@ -31,7 +27,6 @@
     }
 
     table{
-        font-size: 1.4rem;
         table-layout:auto;
         width: auto;
     }

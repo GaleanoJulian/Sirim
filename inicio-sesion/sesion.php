@@ -12,6 +12,9 @@ if($varsesion==null || $varsesion==''){ //un if para preguntar en donde si la va
 
 ?>
 
+<?php
+    include("./validar-usuarios.php");
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,6 +28,7 @@ if($varsesion==null || $varsesion==''){ //un if para preguntar en donde si la va
     <script src="./js/rel_sesionperfilus.js"></script>
     <script src="./js/opcion-inscripcion.js"></script>
     <script src="./js/opcion-lista_prod.js"></script>
+    <script src="./js/opcion-inscripcion.js"></script>
     <link rel="stylesheet" href="./css/Responsive/RD-sesion/mobile-tab.css" media="screen and (max-width:600px)">
 </head>
 <body>
@@ -43,7 +47,7 @@ if($varsesion==null || $varsesion==''){ //un if para preguntar en donde si la va
             <div id="photo"><img src="images/profilephoto.png" alt="Foto del perfil de usuario"></div>
             <div id="name"><span>
             <?php
-    session_start();
+    
     // Verificar si la sesión está iniciada
     if(isset($_SESSION['email'])) {
         // Mostrar nombre y apellidos
@@ -69,7 +73,8 @@ if($varsesion==null || $varsesion==''){ //un if para preguntar en donde si la va
             <div class="separator"></div>
 
             <div class="item">
-                <a href="./inscripcion-admin_volunt.html">
+                
+                <a href="./inscripcion-beneficiario.php">
                     <div class="icon"><img src="images/inscripcion.png" alt=""></div>
                     <div class="title"><span>Inscripciones</span></div>
                 </a>
@@ -84,27 +89,27 @@ if($varsesion==null || $varsesion==''){ //un if para preguntar en donde si la va
                 </a>
             </div>
             
-            <div class="separator <?php if ($id_rol != 1 && $id_rol != 2) echo 'hidden'; ?>" id="convocatoria" ></div>
+            <div class="separator admin-vol"></div>
 
-            <div class="item <?php if ($id_rol != 1 && $id_rol != 2) echo 'hidden'; ?>" id="convocatoria">
+            <div class="item admin-vol">
                 <a href="./convocatoria.php">
                     <div class="icon"><img src="images/convocatoria.png" id="iconconv" alt=""></div>
                     <div class="title"><span>Convocatorias</span></div>
                 </a>
             </div>
             
-            <div class="separator <?php if ($id_rol != 1 && $id_rol != 2) echo 'hidden'; ?>" id="convocatoria"></div>
+            <div class="separator admin-vol"></div>
 
-            <div class="item <?php if ($id_rol != 1 && $id_rol != 2) echo 'hidden'; ?>" id="inventario">
+            <div class="item">
                 <a href="./tarjetas-inventario.php">
                     <div class="icon"><img src="images/inventario.png" alt=""></div>
                     <div class="title"><span>Inventario</span></div>
                 </a>
             </div>
             
-            <div class="separator <?php if ($id_rol != 1 && $id_rol != 2) echo 'hidden'; ?>" id="convocatoria"></div>
+            <div class="separator admin-vol"></div>
 
-            <div class="item <?php if ($id_rol != 1 && $id_rol != 2) echo 'hidden'; ?>" id="lista_compras">
+            <div class="item admin-vol">
                 <a href="lista-compras.html">
                     <div class="icon"><img src="images/listacompras.png" alt=""></div>
                     <div class="title"><span>Lista de compras</span></div>
@@ -112,9 +117,9 @@ if($varsesion==null || $varsesion==''){ //un if para preguntar en donde si la va
                     
             </div>
             
-            <div class="separator <?php if ($id_rol != 1 && $id_rol != 2) echo 'hidden'; ?>" id="convocatoria"></div>
+            <div class="separator admin-vol"></div>
 
-            <div class="item <?php if ($id_rol != 1 && $id_rol != 2) echo 'hidden'; ?>" id="gestion_user">
+            <div class="item admin-vol">
                 <a href="#">
                     <div class="icon"><img src="images/gestion_user.png" alt=""></div>
                     <div class="title"><span>Gestión de usuarios</span></div>
@@ -129,7 +134,7 @@ if($varsesion==null || $varsesion==''){ //un if para preguntar en donde si la va
     <main class="main-container">
         <div class="saludo-container">
             <h1><?php
-    session_start();
+    
     // Verificar si la sesión está iniciada
     if(isset($_SESSION['email'])) {
         // Mostrar nombre y apellidos

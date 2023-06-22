@@ -10,11 +10,11 @@
 
 .opcion button{
     padding: 5rem;
-    font-size: 2rem;
+
     margin-bottom: 0.5rem;
 }
 .inscribir-conv label span{
-    font-size: 3rem;
+
     font-weight: bold;
     margin-top: 1rem;
     margin-bottom: 1.3rem;    
@@ -23,11 +23,10 @@
 .inscribir-conv label input{
     border-radius: 0.8rem;
     padding: 1.6rem 0;
-    font-size: 3rem;
+
 }
 
 #insc-usuario button.inscribirse-btn{
-    font-size: 3.2rem;
     margin-top: 2rem;
     margin-left: 10%;
     margin-right: 10%;
