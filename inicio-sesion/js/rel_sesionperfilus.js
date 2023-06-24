@@ -9,6 +9,7 @@
         event.preventDefault();
         loadContent(target);
       });
+      
     });
   });
 })();
@@ -25,3 +26,4 @@ function loadContent(url) {
   xhttp.open('GET', url, true);
   xhttp.send();
 }
+

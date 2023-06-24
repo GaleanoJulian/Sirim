@@ -9,12 +9,8 @@ if($varsesion==null || $varsesion==''){ //un if para preguntar en donde si la va
     header ("location:../login.php"); // que me redirija a la página de login
     die(); //y después destruya la sesión
 }
-
 ?>
 
-<?php
-    include("./validar-usuarios.php");
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -74,7 +70,7 @@ if($varsesion==null || $varsesion==''){ //un if para preguntar en donde si la va
 
             <div class="item">
                 
-                <a href="./inscripcion-beneficiario.php">
+                <a href="../conexion-y-logica/mostrar_inscripcion_user.php">
                     <div class="icon"><img src="images/inscripcion.png" alt=""></div>
                     <div class="title"><span>Inscripciones</span></div>
                 </a>
