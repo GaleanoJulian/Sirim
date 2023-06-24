@@ -11,6 +11,7 @@ if($varsesion==null || $varsesion==''){ //un if para preguntar en donde si la va
 }
 ?>
 
+<?php include("../conexion-y-logica/ocultarBotonesA-Beneficiario.php"); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -84,7 +85,9 @@ if($varsesion==null || $varsesion==''){ //un if para preguntar en donde si la va
                     <div class="title"><span>Entrega de mercados</span></div>
                 </a>
             </div>
-            
+
+            <?php if ($id_rol != 3) { ?>
+        
             <div class="separator admin-vol"></div>
 
             <div class="item admin-vol">
@@ -121,6 +124,8 @@ if($varsesion==null || $varsesion==''){ //un if para preguntar en donde si la va
                     <div class="title"><span>Gestión de usuarios</span></div>
                 </a>
             </div>
+
+            <?php } ?>
             
             <div class="separator"></div>
 
