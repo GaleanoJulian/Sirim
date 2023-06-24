@@ -39,7 +39,10 @@ main.inscription-main{
 
 .inscribir-conv{
     display: none;
-
+}
+.centrar-form{
+    display:flex;
+    flex-direction: column;
 }
 
 .inscribir-conv label{
@@ -61,7 +64,7 @@ main.inscription-main{
 }
 
 #insc-usuario button.inscribirse-btn{
-    padding: 1rem 5rem;
+    padding: 1rem;
     background: linear-gradient(
         90deg,
         #3FABDD 25%,

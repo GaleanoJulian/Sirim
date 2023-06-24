@@ -26,11 +26,13 @@
 
     <main class="inscription-main">
         <section id="insc-usuario" class="inscribir-conv">
-            <label for="inscribirse">
-                <span>Convocatoria activa</span>
-                <input type="text" name="inscribirse" id="inscribirse">
-            </label>
-        <button type="submit" class="inscribirse-btn">Inscribirse</button>           
+            <div class="centrar-form">
+                <label for="inscribirse">
+                    <span>Convocatoria activa</span>
+                    <input type="text" name="inscribirse" id="inscribirse">
+                </label>
+            <button type="submit" class="inscribirse-btn">Inscribirse</button>
+            </div>           
         </section>
 
         <section id="consul-insc" class="inscribir-conv">

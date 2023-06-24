@@ -28,7 +28,7 @@
       
       <div class="input-box">
             <label>Correo electrónico</label>
-            <input type="email" name="email" value="<?php echo $email; ?>" placeholder="Ingrese su correo electrónico" maxlength="50" required />
+            <input type="email" name="email" value="<?php echo $correo; ?>" placeholder="Ingrese su correo electrónico" maxlength="50" required />
       </div>
 
        <div class="input-box">
@@ -36,7 +36,7 @@
             <div class="column">             
             <div class="select-box adaptar">
             <select name="doc_type" class="Tipodocumento" required>
-                    <option value="Seleccione" disabled selected hidden><?php echo $docType; ?></option>
+                    <option value="Seleccione" name="doc_type" disabled selected hidden><?php echo $docType; ?></option>
                     <option value="Cédula de ciudadanía">Cédula de ciudadanía</option>
                     <option value="Cédula de extranjería">Cédula de extranjería</option>
                     <option value="Pasaporte">Pasaporte</option>
@@ -61,7 +61,7 @@
                 <label>Género</label>
                 <div class="select-box">
                 <select class="Tipodocumento" name="gender" required>
-                    <option value="Seleccione" disabled selected hidden><?php echo $genero; ?></option>
+                    <option value="Seleccione" name="gender" disabled selected hidden><?php echo $genero; ?></option>
                     <option value="Hombre">Hombre</option>
                     <option value="Mujer">Mujer</option>
                     <option value="Otro">Otro</option>
