@@ -25,7 +25,7 @@
                 $birth_date=trim($_POST['birth_date']);
                 $phone=trim($_POST['phone']);
                 $direction=trim($_POST['direction']);
-                $fecha_ingreso=date("d/m/y");
+                $fecha_ingreso=date("Y/m/d");
 
                 $query_rol="SELECT id FROM rol WHERE rol.rol = 'Beneficiario'"; //Hacer un select para traer el id de la PK y asignarselo a la FK
                 $id_rolQuery = mysqli_query($conection, $query_rol); //Crear una variable que ejecute el query y lo traiga, es decir, es el resultado de una consulta
@@ -46,8 +46,10 @@
                 $mesNacimiento = $fecha_parts[1];
                 $diaNacimiento = $fecha_parts[2];
 
-                $consulta2="INSERT INTO info_usuario(nombres, apellidos, tipo_doc_id, doc_identidad, genero, dia_nacimiento, mes_nacimiento, anio_nacimiento, telefono, direccion, fecha_ingreso, id_usuario)
-                    VALUES('$name','$last_name','$doc_type','$doc_number','$gender','$diaNacimiento','$mesNacimiento','$anioNacimiento','$phone','$direction','$fecha_ingreso','$newid')";
+                $consulta2="INSERT INTO info_usuario(nombres, apellidos, tipo_doc_id, doc_identidad, genero, 
+                dia_nacimiento, mes_nacimiento, anio_nacimiento, telefono, direccion, fecha_ingreso, id_usuario)
+                    VALUES('$name','$last_name','$doc_type','$doc_number','$gender','$diaNacimiento',
+                    '$mesNacimiento','$anioNacimiento','$phone','$direction','$fecha_ingreso','$newid')";
                 $resultado2=mysqli_query($conection, $consulta2);
 
 
