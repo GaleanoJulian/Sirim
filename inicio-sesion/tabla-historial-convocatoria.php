@@ -21,7 +21,7 @@
 </head>
 <body>
 
-<div class="container my-5">  
+<div class="contamy-5">  
   <div class="row">
     <table id="example" class="table table-striped" style="width:100%">
     <caption>Historial de convocatorias</caption>

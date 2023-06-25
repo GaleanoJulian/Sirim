@@ -67,11 +67,10 @@
   column-gap: 15px;
 }
 
-.form .btn {
-  height: 55px;
-  width: 100%;
+.form .btn .btones-conv{
+  width: 50%;
   font-weight: bold;
-  margin-top: 30px;
+  margin-top: 15px;
   border: none;
   cursor: pointer;
   transition: all 0.2s ease;  
@@ -84,9 +83,20 @@
   border-radius: 25px;
   border-top: none;
   border-left: none;
+  display: flex;
+  text-align: center;
+  margin:0.9rem auto
 }
 .form .btn:hover {
   background: #b4994e;
+}
+div.btnes-conv{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin:0.9rem auto;
+
+ 
 }
 
 .table-container{

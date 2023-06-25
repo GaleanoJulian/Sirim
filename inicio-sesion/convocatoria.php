@@ -7,7 +7,7 @@
     <title>Convocatorias</title>
     <link rel="stylesheet" href="./css/styleconvocatoria.css">
     <script src="./js/fechas-convocatoria.js"></script> <!-- Script para validar que las fechas que se ingresen son válidas -->
-    <script src="./js/tabla.js"></script>
+    
 
 </head>
 <body>
@@ -37,19 +37,21 @@
                     <label>Entrega programada para: </label>
                     <input type="text" name="fecha-entrega" value="<?php echo $fechaEntrega; ?>" id="fecha-entrega"/>
                 </div>
-    
-          <input class="btn" type="submit" name="convocar" value="Publicar convocatoria">
+
+                <div class="btnes-conv">
+                  <input class="btn" type="submit" name="convocar" value="Publicar convocatoria">
+                  <input class="btn" type="btn" name="historial" value="Ver historial de convocatorias">
+                </div>
         </form>
     </section>
 
-  <br><br>
-
-  <section class="table-container">
-    <?php 
-      include ("./tabla-historial-convocatoria.php");
-    ?>
-  </section>
 </main>
+
+<section id=tabla-historial>
+                <?php
+                include("./tabla-historial-convocatoria.php")
+                ?>
+    </section>
 
 </body>
 </html>
