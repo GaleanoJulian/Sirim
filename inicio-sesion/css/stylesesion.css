@@ -48,7 +48,7 @@ main.main-container{
     color:rgb(51, 65, 80);
     position: fixed;
     font-weight: bold;
-    height: 100%;
+    height: 103%;
     left: 0;
     top: 0;
     z-index: 1;
@@ -125,8 +125,9 @@ Profile
     width: 60%;
 }
 
-#sidemenu #profile #photo, #sidemenu #profile #name{
-    font-size: 2.4rem;
+
+#sidemenu #profile, #sidemenu #profile #name{
+    margin-left: 2px;
     overflow: hidden;
 }
 
@@ -218,8 +219,8 @@ item
 }
 
 .menu-expanded #profile #photo {
-    width: 18.0rem;
-    margin: 0 15%;
+    width: 16.0rem;
+    margin: 0 20%;
 }
 
 .menu-expanded #profile #name {
@@ -258,7 +259,6 @@ item
 .menu-collapsed #profile #photo {
     width: 5rem;
     margin-left: 3%;
-    margin-top: 4rem;
 }
 
 

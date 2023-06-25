@@ -80,7 +80,7 @@ if($varsesion==null || $varsesion==''){ //un if para preguntar en donde si la va
             <div class="separator"></div>
 
             <div class="item">
-                <a href="./entrega-usuario.html">
+                <a href="../conexion-y-logica/mostrar_entrega-user.php">
                     <div class="icon"><img src="images/entrega.png" alt=""></div>
                     <div class="title"><span>Entrega de mercados</span></div>
                 </a>
