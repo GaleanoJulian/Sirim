@@ -7,6 +7,8 @@
     <title>Convocatorias</title>
     <link rel="stylesheet" href="./css/styleconvocatoria.css">
     <script src="./js/fechas-convocatoria.js"></script> <!-- Script para validar que las fechas que se ingresen son válidas -->
+    <script src="./js/tabla.js"></script>
+
 </head>
 <body>
 <main class="main-convocatoria">
@@ -43,56 +45,11 @@
   <br><br>
 
   <section class="table-container">
-    <header>Historial de convocatorias</header><br>
-    <table id=table1>
-      <thead>
-        <tr>
-          <th>Convocatoria</th>
-          <th>Fecha inicial</th>
-          <th>Fecha final</th>
-          <th>Fecha de entrega</th>
-          <th>Estado</th>
-          <th>Responsable</th>
-          <th>Rol</th>
-        </tr>
-      </thead>
-      <tbody>
-        <?php
-          include("../conexion-y-logica/conexion.php");
-
-          $consultaTC= "SELECT 
-          convocatoria.id AS id,
-          convocatoria.fecha_inicio AS fecha_inicio,
-          convocatoria.fecha_fin AS fecha_fin,
-          convocatoria.fecha_entrega AS fecha_entrega,
-          convocatoria.vigente AS vigencia,
-          CONCAT(info_usuario.nombres, ' ', info_usuario.apellidos) AS responsable,
-          rol.rol AS rol
-            FROM convocatoria 
-            INNER JOIN responsable ON responsable.id = convocatoria.id_responsable 
-            INNER JOIN info_usuario ON info_usuario.id_usuario=responsable.id_usuario
-            INNER JOIN usuario ON usuario.id=info_usuario.id_usuario
-            INNER JOIN rol ON rol.id=usuario.id_rol ORDER BY id DESC";
-          $resultadoTC=mysqli_query($conection, $consultaTC);         
-          
-          while($mostrar=mysqli_fetch_array($resultadoTC)){
-        ?>
-        <tr>
-          <td><?php echo $mostrar['id']?></td>
-          <td><?php echo $mostrar['fecha_inicio']?></td>
-          <td><?php echo $mostrar['fecha_fin']?></td>
-          <td><?php echo $mostrar['fecha_entrega']?></td>
-          <td><?php echo $mostrar['vigencia']?></td>
-          <td><?php echo $mostrar['responsable']?></td>
-          <td><?php echo $mostrar['rol']?></td>
-        </tr>
-        <?php
-          }
-        ?>
-
-    </table>
+    <?php 
+      include ("./tabla-historial-convocatoria.php");
+    ?>
   </section>
 </main>
-    
+
 </body>
 </html>
