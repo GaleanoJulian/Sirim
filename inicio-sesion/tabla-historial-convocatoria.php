@@ -55,13 +55,15 @@
               $resultadoTC=mysqli_query($conection, $consultaTC);         
               
               while($mostrar=mysqli_fetch_array($resultadoTC)){
+                $fechaEntrega = $mostrar['fecha_entrega'];
+                $estado = (strtotime($fechaEntrega) <= strtotime(date('Y-m-d'))) ? "No vigente" : "Vigente";
             ?>
             <tr>
               <td><?php echo $mostrar['id']?></td>
               <td><?php echo $mostrar['fecha_inicio']?></td>
               <td><?php echo $mostrar['fecha_fin']?></td>
               <td><?php echo $mostrar['fecha_entrega']?></td>
-              <td></td>
+              <td><?php echo $estado?></td>
               <td><?php echo $mostrar['responsable']?></td>
               <td><?php echo $mostrar['rol']?></td>
             </tr>

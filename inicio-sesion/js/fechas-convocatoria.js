@@ -1,4 +1,4 @@
-//no sirve
+
 async function addDateEvents(){
 
   await new Promise(resolve => setTimeout(resolve, 1000));
@@ -42,3 +42,4 @@ async function addDateEvents(){
 
   $('#example').DataTable(datatTableOptions);
 }
+
