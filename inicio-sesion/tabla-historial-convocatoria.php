@@ -21,9 +21,9 @@
 </head>
 <body>
 
-<div class="contamy-5">  
-  <div class="row">
-    <table id="example" class="table table-striped" style="width:100%">
+<div class="contamy-5" style="width:110%">  
+  <div class="row" >
+    <table id="example" class="table table-striped" >
     <caption>Historial de convocatorias</caption>
     <thead>
       <tr>
@@ -45,14 +45,13 @@
               convocatoria.fecha_inicio AS fecha_inicio,
               convocatoria.fecha_fin AS fecha_fin,
               convocatoria.fecha_entrega AS fecha_entrega,
-              convocatoria.vigente AS vigencia,
               CONCAT(info_usuario.nombres, ' ', info_usuario.apellidos) AS responsable,
               rol.rol AS rol
                 FROM convocatoria 
                 INNER JOIN responsable ON responsable.id = convocatoria.id_responsable 
                 INNER JOIN info_usuario ON info_usuario.id_usuario=responsable.id_usuario
                 INNER JOIN usuario ON usuario.id=info_usuario.id_usuario
-                INNER JOIN rol ON rol.id=usuario.id_rol ORDER BY id DESC";
+                INNER JOIN rol ON rol.id=usuario.id_rol ORDER BY convocatoria.id DESC";
               $resultadoTC=mysqli_query($conection, $consultaTC);         
               
               while($mostrar=mysqli_fetch_array($resultadoTC)){
@@ -62,7 +61,7 @@
               <td><?php echo $mostrar['fecha_inicio']?></td>
               <td><?php echo $mostrar['fecha_fin']?></td>
               <td><?php echo $mostrar['fecha_entrega']?></td>
-              <td><?php echo $mostrar['vigencia']?></td>
+              <td></td>
               <td><?php echo $mostrar['responsable']?></td>
               <td><?php echo $mostrar['rol']?></td>
             </tr>

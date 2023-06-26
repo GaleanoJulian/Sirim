@@ -7,7 +7,7 @@
   margin: 0;
 }
 
-.container {
+#container-convocatoria {
   position: static;
   max-width: 700px;
   width: 100%;
@@ -15,10 +15,35 @@
   padding: 25px;
   border-radius: 8px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  margin-left:8%;
+  margin-left: auto;
   margin-top: 3%;
   margin-bottom: 3%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.8rem;
 }
+
+.btnes-conv > .btn {
+    width: 40%;
+    padding: 1.3rem;
+    background: linear-gradient( 90deg, #ddbc60 25%, #CD7A57 100%);
+    color: #2f2e30;
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 2.5rem;
+    border-top: none;
+    border-left: none;
+    text-align: center;
+    margin: 1.2rem 1.2rem;
+}
+
+#fecha_error_inicio, #fecha_error_fin{ /*span de que las edades no están en el rango*/
+	color: #c35628; 
+	font-weight:bold;
+	font-size: 12px;
+	margin-bottom: 15px;
+}
+
 
 .container header{
   font-size: 3rem;

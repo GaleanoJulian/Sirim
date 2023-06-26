@@ -1,4 +1,4 @@
-let dataTable;
+let dataTable2;
 let dataTableIsInitialized=false;
 
 let datatTableOptions={         
@@ -284,7 +284,7 @@ language: {
 };
 
 
-$(document).ready(function () {
-    $('#example').DataTable(datatTableOptions);
+// $(document).ready(function () {
+//     //$('#example').DataTable(datatTableOptions);
     
-});
+// });
