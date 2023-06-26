@@ -33,17 +33,20 @@
                 <div class="texto-celdas">
                     Te invitamos a conocer las fechas importantes relacionadas con nuestra
                     próxima entrega: <br><br>
+                    <?php
+                        include("./conexion-y-logica/conexion_convocatoria-index.php");
+                    ?>
                     <div>
                         <label>Próxima entrega de mercados: </label> <br><br>
-                        <input class="fechas-convocatoria" type="text"/>
+                        <input class="fechas-convocatoria" value="<?php echo $fechaEntrega; ?>" type="text"/>
                     </div>
                     <div>
                         <label>Inicio de las inscripciones: </label> <br><br>
-                        <input class="fechas-convocatoria" type="text"/>
+                        <input class="fechas-convocatoria" value="<?php echo $fechaInicio; ?>" type="text"/>
                     </div>
                     <div>
                         <label>Fin de las inscripciones: </label> <br><br>
-                        <input class="fechas-convocatoria" type="text"/>
+                        <input class="fechas-convocatoria" value="<?php echo $fechaFin; ?>"type="text"/>
                     </div>
                     Si deseas inscribirte, por favor inicia tu sesión y realiza 
                     el proceso de inscripción: <br><br>
@@ -77,8 +80,6 @@
 </main>
 
 
-<?php
-        include("./conexion-y-logica/conexion_convocatoria-index.php");
-    ?>
+
 </body>
 </html>
