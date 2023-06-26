@@ -16,10 +16,10 @@
 
     <header class="insc-header">
         <div class="opcion">
-            <button onclick="mostrarContenido('insc-usuario')">Inscribirse a una convocatoria</button>
+            <button onclick="mostrarContenidoinscripcion('insc-usuario')">Inscribirse a una convocatoria</button>
         </div>
         <div class="opcion">
-            <button onclick="mostrarContenido('consul-insc')">Consultar estado del proceso</button>
+            <button onclick="mostrarContenidoinscripcion('consul-insc')">Consultar estado del proceso</button>
         </div>
         
     </header>

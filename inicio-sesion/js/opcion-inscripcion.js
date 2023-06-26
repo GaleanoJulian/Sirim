@@ -1,4 +1,4 @@
-function mostrarContenido(id) {
+function mostrarContenidoinscripcion(id) {
     // Obtener todos los elementos con la clase 'contenido'
     var contenidos = document.getElementsByClassName('inscribir-conv');
   

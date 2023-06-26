@@ -1,6 +1,6 @@
-function mostrarContenidoListaProductos(id) {
+function mostrarContenidoInventario(id) {
     // Obtener todos los elementos con la clase 'contenido'
-    var contenidos = document.getElementsByClassName('opt-container');
+    var contenidos = document.getElementsByClassName('productos-paquetes');
   
     // Ocultar todos los contenidos
     for (var i = 0; i < contenidos.length; i++) {

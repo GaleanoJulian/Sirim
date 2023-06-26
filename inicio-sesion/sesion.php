@@ -25,8 +25,9 @@ if($varsesion==null || $varsesion==''){ //un if para preguntar en donde si la va
     <script src="./js/rel_sesionperfilus.js"></script>
     <script src="./js/opcion-inscripcion.js"></script>
     <script src="./js/opcion-lista_prod.js"></script>
-    <script src="./js/opcion-inscripcion.js"></script>
     <script src="./js/fechas-convocatoria.js"></script>
+    <script src="./js/opcion-inventario.js"></script>
+    
      <!-- data table -->
      <link 
     href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css" 

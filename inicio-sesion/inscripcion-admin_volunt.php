@@ -13,10 +13,10 @@
 
     <header class="insc-header">
         <div class="opcion">
-            <button onclick="mostrarContenido('insc-usuario')">Realizar inscripciones</button>
+            <button onclick="mostrarContenidoinscripcion('insc-usuario')">Realizar inscripciones</button>
         </div>
         <div class="opcion">
-            <button onclick="mostrarContenido('consul-insc')">Consultar y aprobar inscripciones</button>
+            <button onclick="mostrarContenidoinscripcion('consul-insc')">Consultar y aprobar inscripciones</button>
         </div>
         
     </header>
