@@ -22,9 +22,9 @@
 <div class="tarjetas">
     <header class="tarj-header">¿Qué desea hacer?</header><br>
 
-    <main class="container">
+    <main class="container-cards">
             <section class="card-container1 section-container">
-                <div class="card">
+                <div class="card-inventario">
                     <figure>
                         <img src="./images/productos.png" alt="Dibujo de un estante de un estante lleno de productos">
                     </figure>
@@ -37,7 +37,7 @@
             </section>
         
             <section class="card-container2 section-container">
-                <div class="card">
+                <div class="card-inventario">
                     <figure>
                         <img src="./images/ingreso-prod.jpg" alt="Dibujo de persona ingresando productos al almacén">
                     </figure>
@@ -50,7 +50,7 @@
             </section>
         
             <section class="card-container3 section-container">
-                <div class="card">
+                <div class="card-inventario">
                     <figure>
                         <img id="img3" src="./images/armar-paquetes.jpg" alt="Dibujo de un paquete gigante con productos y una familia al rededor">
                     </figure>
@@ -63,7 +63,7 @@
             </section>
         
             <section class="card-container4 section-container">
-                <div class="card">
+                <div class="card-inventario">
                     <figure>
                         <img src="./images/paquetes-stock.png" alt="Dibujo de un estante lleno de paquetes armados con productos">
                     </figure>
@@ -86,43 +86,14 @@
 <!-- Contenido primera tarjeta -->
 
             <div id="consultar-productos" class="productos-paquetes" style="display: none;">
-                <div>
-                    <label for="buscar-user">
-                        <span>Buscar producto</span>
-                        <div class="input-box_doc">
-                            <input type="text" placeholder="Nombre del producto" required />
-                        </div>
-                    </label>
-                <button type="submit" class="inscribirse-btn">Buscar</button> 
-                </div><br>
-                <section class="entrega-user">
-                    <table>
-                        <thead>
-                            <th>Producto</th>
-                            <th>Categoría</th>
-                            <th>Presentación</th>
-                            <th>Contenido</th>
-                            <th>Unidad</th>
-                            <th>Fecha de ingreso</th>
-                            <th>Estado de vencimiento</th>
-                            <th>Cantidad</th>
-                            <th>Eliminar</th>
-                        </thead>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </table>
+
+                <section class="tablas-inventario">
+                    <?php
+                        include("tabla-consultarProductos.php")
+                    ?>
                 </section>
 
-                <div class="row">
+                <div class="row-inventario">
             
                         <input class="btn" name="ingresar-producto" type="submit" value="Ingresar producto nuevo">
 
@@ -305,23 +276,13 @@
                 </section>
                 
                 <section>
-                        <table>
-                            <thead>
-                                <th>Producto</th>
-                                <th>Presentación</th>
-                                <th>Contenido</th>
-                                <th>Unidad</th>
-                                <th>Cantidad</th>
-                                <th>Eliminar</th>
-                            </thead>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                        </table>
+
+                    <br><br>
+                    <section class="tablas-inventario">
+                        <?php
+                            include("tabla-armar-paquetesInventario.php")
+                        ?>
+                    </section>
 
                         <div class="row">
                             <div>
@@ -329,11 +290,13 @@
                             </div>
                             <div>
                                 <input class="btn" type="submit" value="Guardar cambios">
+                                <br><br>
                             </div>
                         </div>
                 </section>
 
                 <section class="container">
+                    
                 
                     <form action="#" class="form">
 
@@ -351,40 +314,17 @@
                     </form>
                 </section>
 
-                <div class="input-box">
-                    <input class="btn" name="regresar" onclick="mostrarTarjeHeader()" type="submit" value="Regresar">
-                </div>
-
             </div>
 
 <!-- Contenido cuarta tarjeta -->
 
             <div id="paquetes-stock" class="productos-paquetes" style="display: none;">
-                <div>
-                    <label for="buscar-user">
-                        <span>Filtrar</span>
-                        <div class="input-box_doc">
-                            <input type="text" placeholder="palabra" required />
-                        </div>
-                    </label>
-                <button type="submit" class="inscribirse-btn">Buscar</button> 
-                </div><br>
                 <section class="entrega-user">
-                    <table>
-                        <thead>
-                            <th>Fecha de creación</th>
-                            <th>Creó</th>
-                            <th>Rol</th>
-                            <th>Contenido</th> <!-- pop-up -->
-                            <th>Cantidad</th>
-                        </thead>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                    </table>
+                    <section class="tablas-inventario">
+                        <?php
+                            include("tabla-paquetes-stockInventario.php")
+                        ?>
+                    </section>
                 </section>
 
                 <div class="row">
