@@ -32,6 +32,7 @@
         <th>Tipo de documento</th>
         <th>Documento de identidad</th>
         <th>Rol</th>
+        <th>Convocatoria</th>
         <th>Estado de inscripcion</th>
         <th>Aprobación</th>
       </tr>
@@ -60,6 +61,7 @@
               <td><?php echo $mostrar['tipo_doc_id']?></td>
               <td><?php echo $mostrar['doc_identidad']?></td>
               <td><?php echo $mostrar['rol']?></td>
+              <td>(Fecha convocatoria)</td>
               <td>(estado)</td>
               <td>(botones)</td>
 
@@ -75,6 +77,7 @@
                 <th>Tipo de documento</th>
                 <th>Documento de identidad</th>
                 <th>Rol</th>
+                <th>Convocatoria</th>
                 <th>Estado de inscripcion</th>
                 <th>Aprobación</th>
               </tr>

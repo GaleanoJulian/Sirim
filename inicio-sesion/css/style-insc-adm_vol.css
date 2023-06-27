@@ -137,8 +137,12 @@ section.inscribir-conv .cajabuscar{
     align-items: center;
 }
 
-#tabla-historial{
+#tabla-historial2{
     margin:0 5%;
+}
+
+#example1_wrapper > .dt-buttons{
+    display: none;
 }
 
 

@@ -34,7 +34,7 @@
                     </label>
                 </div>
                 <div>
-                    <section id=tabla-historial>
+                    <section id=tabla-historial1>
                         <br><br>
                         <?php
                         include("tabla-inscribir-usuario.php")
@@ -47,7 +47,7 @@
 
         <section id="consul-insc" class="inscribir-conv">
         <div>
-                    <section id=tabla-historial>
+                    <section id=tabla-historial2>
                         <br><br>
                         <?php
                         include("tabla-consultar-aprobarInscrip.php")
