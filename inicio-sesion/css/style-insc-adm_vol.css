@@ -136,51 +136,10 @@ section.inscribir-conv .cajabuscar{
     flex-direction: column;
     align-items: center;
 }
-.cajabuscar{
-    margin: 2rem 0;
 
+#tabla-historial{
+    margin:0 5%;
 }
 
-table.conv-table{
-    --border:solid 1px #707070;
-    border-spacing: 0;
-    border-collapse: separate;
-    border-radius: 1rem;
-    overflow: hidden;
-    border: var(--border);
-    border-bottom: none;
-  }
 
-table{
-    border: solid;
-    color: #2f2e30;
-    font-size: 1.4rem;
-    border-collapse: collapse;
-    width: 40rem;
-    margin-left: 25px;
-    text-align: center;
-  
-  }
 
-  thead{
-    background-color: #3FABDD;
-  }
-
-  th{
-    padding: 2rem 1.5rem;
-    font-weight: 700;
-    border-bottom: solid 1px  #707070;
-  
-  }
-  td{
-    padding: 1.5rem;
-    border-bottom: solid 0.1rem  #707070;
-  }
-  
-  tbody tr{
-    background-color: white;
-  }
-
-  tbody tr:hover{
-    background-color: #ADDEF4;
-  }

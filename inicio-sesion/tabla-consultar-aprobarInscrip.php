@@ -23,8 +23,8 @@
 
 <div class="contamy-5" style="width:110%">  
   <div class="row" >
-    <table id="example1" class="table table-striped" >
-    <caption>Inscripcion de usuarios </caption>
+    <table id="example2" class="table table-striped" >
+    <caption>Consultar y aprobar inscripciones</caption>
     <thead>
       <tr>
         <th>Nombres</th>
@@ -32,7 +32,8 @@
         <th>Tipo de documento</th>
         <th>Documento de identidad</th>
         <th>Rol</th>
-        <th>Inscribir</th>
+        <th>Estado de inscripcion</th>
+        <th>Aprobación</th>
       </tr>
     </thead>
         <tbody>
@@ -59,6 +60,7 @@
               <td><?php echo $mostrar['tipo_doc_id']?></td>
               <td><?php echo $mostrar['doc_identidad']?></td>
               <td><?php echo $mostrar['rol']?></td>
+              <td>(estado)</td>
               <td>(botones)</td>
 
             </tr>
@@ -73,7 +75,8 @@
                 <th>Tipo de documento</th>
                 <th>Documento de identidad</th>
                 <th>Rol</th>
-                <th>Inscribir</th>
+                <th>Estado de inscripcion</th>
+                <th>Aprobación</th>
               </tr>
         </tfoot>
     </table>

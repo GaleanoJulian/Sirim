@@ -46,30 +46,14 @@
         </section>
 
         <section id="consul-insc" class="inscribir-conv">
-            <div class="cajabuscar">
-                <form method="get" id="buscarform">
-                    <input type="text" id="s" value="" placeholder="Buscar convocatoria"  />
-                    <input class="button" type="submit" value="Buscar" />
-                    <i class="search"></i>
-                </form>
-            </div><br>
-
-            <table class="conv-table">
-                <thead>
-                    <th>Nombres</th>
-                    <th>Apellidos</th>
-                    <th>Fecha de inscripción</th>
-                    <th>Estado</th>
-                    <th>Aprobación</th>
-                </thead>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </table>
+        <div>
+                    <section id=tabla-historial>
+                        <br><br>
+                        <?php
+                        include("tabla-consultar-aprobarInscrip.php")
+                        ?>
+                    </section> 
+                </div> 
         </section>
 
     </main>
