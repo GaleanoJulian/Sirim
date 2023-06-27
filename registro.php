@@ -68,12 +68,12 @@
             <div class="select-box adaptar">
             <select name="doc_type" class="Tipodocumento" required>
                     <option value="Seleccione" disabled selected hidden>Tipo de documento</option>
-                    <option value="Cedula_ciudadania">Cédula de ciudadanía</option>
-                    <option value="Cedula_extranjeria">Cédula de extranjería</option>
+                    <option value="Cédula de ciudadanía">Cédula de ciudadanía</option>
+                    <option value="Cédula de extranjería">Cédula de extranjería</option>
                     <option value="Pasaporte">Pasaporte</option>
-                    <option value="Permiso_proteccion_temporal">PPT</option>
-                    <option value="Permiso_ingreso_permanencia">PIP</option>
-                    <option value="Permiso_especial_permanencia">PEP</option>
+                    <option value="PPT">PPT</option>
+                    <option value="PIP">PIP</option>
+                    <option value="PEP">PEP</option>
                 </select>
                 <span class="error-message">Este campo es obligatorio</span>
             </div>
