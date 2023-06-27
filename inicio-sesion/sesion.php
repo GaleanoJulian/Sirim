@@ -127,7 +127,7 @@ if($varsesion==null || $varsesion==''){ //un if para preguntar en donde si la va
             <?php if ($id_rol != 3) { ?>
 
             <div class="item admin-vol">
-                <a href="lista-compras.html">
+                <a href="lista-compras.php">
                     <div class="icon"><img src="images/listacompras.png" alt=""></div>
                     <div class="title"><span>Lista de compras</span></div>
                 </a>

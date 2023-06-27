@@ -10,4 +10,18 @@ function mostrarContenidoListaProductos(id) {
     // Mostrar el contenido correspondiente al ID recibido
     var contenido = document.getElementById(id);
     contenido.style.display = 'block';
+
+    var tableGenListaInitialized =  $.fn.DataTable.isDataTable('#exampleGenLista');
+    var tableConListaInitialized =  $.fn.DataTable.isDataTable('#exampleConLista');
+    var tablePersProdInitialized =  $.fn.DataTable.isDataTable('#examplePersProd');
+    
+    if($('#exampleGenLista').css('display') == 'table' && !tableGenListaInitialized){
+      $('#exampleGenLista').DataTable(datatTableOptions);
+    } 
+    if($('#exampleConLista').css('display') == 'table' && !tableConListaInitialized){
+      $('#exampleConLista').DataTable(datatTableOptions);
+    }
+    if($('#examplePersProd').css('display') == 'table' && !tablePersProdInitialized){
+      $('#examplePersProd').DataTable(datatTableOptions);
+    } 
   }
