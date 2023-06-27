@@ -19,67 +19,72 @@
 
 </head>
 <body>
+<div class="tarjetas">
+    <header class="tarj-header">¿Qué desea hacer?</header><br>
 
-<header class="tarj-header">¿Qué desea hacer?</header><br>
+    <main class="container">
+            <section class="card-container1 section-container">
+                <div class="card">
+                    <figure>
+                        <img src="./images/productos.png" alt="Dibujo de un estante de un estante lleno de productos">
+                    </figure>
+                    <div class="card-content">
+                        <h3>Consultar productos en stock</h3>
+                        <p>Ingrese aquí para ver los productos disponibles en el almacén y su información asociada.</p><br>
+                        <button class="btn-tarjeta" onclick="mostrarContenidoInventario('consultar-productos')">Ingresar</button>
+                    </div>
+                </div>
+            </section>
+        
+            <section class="card-container2 section-container">
+                <div class="card">
+                    <figure>
+                        <img src="./images/ingreso-prod.jpg" alt="Dibujo de persona ingresando productos al almacén">
+                    </figure>
+                    <div class="card-content">
+                        <h3>Registrar productos nuevos</h3>
+                        <p>Ingrese aquí para registrar los productos nuevos que van a ingresar al almacén.</p><br><br>
+                        <button class="btn-tarjeta" onclick="mostrarContenidoInventario('registrar-productos')">Ingresar</button>
+                    </div>
+                </div>
+            </section>
+        
+            <section class="card-container3 section-container">
+                <div class="card">
+                    <figure>
+                        <img id="img3" src="./images/armar-paquetes.jpg" alt="Dibujo de un paquete gigante con productos y una familia al rededor">
+                    </figure>
+                    <div class="card-content">
+                        <h3>Armar paquetes de productos</h3>
+                        <p>Ingrese aquí para registrar los paquetes que se van a armar, indicando los productos.</p><br>
+                        <button class="btn-tarjeta" onclick="mostrarContenidoInventario('armar-paquetes')">Ingresar</button>
+                    </div>
+                </div>
+            </section>
+        
+            <section class="card-container4 section-container">
+                <div class="card">
+                    <figure>
+                        <img src="./images/paquetes-stock.png" alt="Dibujo de un estante lleno de paquetes armados con productos">
+                    </figure>
+                    <div class="card-content">
+                        <h3>Consultar paquetes en stock</h3>
+                        <p>Ingrese aquí para consultar paquetes que se encuentran en el almacén listos para asignación y/o entrega.</p>
+                        <button class="btn-tarjeta" onclick="mostrarContenidoInventario('paquetes-stock')">Ingresar</button>
+                    </div>
+                </div>
+            </section>
+        
+    </main>
 
-<main class="container">
-        <section class="card-container1 section-container">
-            <div class="card">
-                <figure>
-                    <img src="./images/productos.png" alt="Dibujo de un estante de un estante lleno de productos">
-                </figure>
-                <div class="card-content">
-                    <h3>Consultar productos en stock</h3>
-                    <p>Ingrese aquí para ver los productos disponibles en el almacén y su información asociada.</p><br>
-                    <button class="btn-tarjeta" onclick="mostrarContenidoInventario('consultar-productos')">Ingresar</button>
-                </div>
-            </div>
-        </section>
-    
-        <section class="card-container2 section-container">
-            <div class="card">
-                <figure>
-                    <img src="./images/ingreso-prod.jpg" alt="Dibujo de persona ingresando productos al almacén">
-                </figure>
-                <div class="card-content">
-                    <h3>Registrar productos nuevos</h3>
-                    <p>Ingrese aquí para registrar los productos nuevos que van a ingresar al almacén.</p><br><br>
-                    <button class="btn-tarjeta" onclick="mostrarContenidoInventario('registrar-productos')">Ingresar</button>
-                </div>
-            </div>
-        </section>
-    
-        <section class="card-container3 section-container">
-            <div class="card">
-                <figure>
-                    <img id="img3" src="./images/armar-paquetes.jpg" alt="Dibujo de un paquete gigante con productos y una familia al rededor">
-                </figure>
-                <div class="card-content">
-                    <h3>Armar paquetes de productos</h3>
-                    <p>Ingrese aquí para registrar los paquetes que se van a armar, indicando los productos.</p><br>
-                    <button class="btn-tarjeta" onclick="mostrarContenidoInventario('armar-paquetes')">Ingresar</button>
-                </div>
-            </div>
-        </section>
-    
-        <section class="card-container4 section-container">
-            <div class="card">
-                <figure>
-                    <img src="./images/paquetes-stock.png" alt="Dibujo de un estante lleno de paquetes armados con productos">
-                </figure>
-                <div class="card-content">
-                    <h3>Consultar paquetes en stock</h3>
-                    <p>Ingrese aquí para consultar paquetes que se encuentran en el almacén listos para asignación y/o entrega.</p>
-                    <button class="btn-tarjeta" onclick="mostrarContenidoInventario('paquetes-stock')">Ingresar</button>
-                </div>
-            </div>
-        </section>
-    
-</main>
+</div>
 
 
 <section>
 <br><br><br>
+
+<!-- Contenido primera tarjeta -->
+
             <div id="consultar-productos" class="productos-paquetes" style="display: none;">
                 <div>
                     <label for="buscar-user">
@@ -119,11 +124,14 @@
 
                 <div class="row">
             
-                        <input class="btn" type="submit" value="Ingresar producto nuevo">
+                        <input class="btn" name="ingresar-producto" type="submit" value="Ingresar producto nuevo">
 
-                        <input class="btn" type="submit" value="Regresar">
+                        <input class="btn" name="regresar" onclick="mostrarTarjeHeader()" type="submit" value="Regresar">
                 </div>
             </div>
+
+<!-- Contenido segunda tarjeta -->
+
             <div id="registrar-productos" class="productos-paquetes" style="display: none;">
                 <div class="container">
                     <header>Registrar productos</header>
@@ -208,7 +216,7 @@
                                 <input class="btn" type="submit" value="Consultar productos">
                             </div>
                             <div class="input-box">
-                                <input class="btn" type="submit" value="Regresar">
+                                <input class="btn" name="regresar" onclick="mostrarTarjeHeader()" type="submit" value="Regresar">
                             </div>
 
 
@@ -219,6 +227,8 @@
                 
 
             </div>
+
+<!-- Contenido tercera tarjeta -->
 
             <div id="armar-paquetes" class="productos-paquetes" style="display: none;">
                 <section class="container">
@@ -291,6 +301,7 @@
                         <input class="btn" type="submit" value="Adicionar al paquete">
                         
                     </form>
+
                 </section>
                 
                 <section>
@@ -332,11 +343,21 @@
                         </div>
 
                         <input class="btn" type="submit" value="Crear paquetes">
+
+                    <div class="input-box">
+                        <input class="btn" name="regresar" onclick="mostrarTarjeHeader()" type="submit" value="Regresar">
+                    </div>
                         
                     </form>
                 </section>
 
+                <div class="input-box">
+                    <input class="btn" name="regresar" onclick="mostrarTarjeHeader()" type="submit" value="Regresar">
+                </div>
+
             </div>
+
+<!-- Contenido cuarta tarjeta -->
 
             <div id="paquetes-stock" class="productos-paquetes" style="display: none;">
                 <div>
@@ -368,7 +389,7 @@
 
                 <div class="row">
 
-                        <input class="btn" type="submit" value="Regresar">
+                        <input class="btn" type="submit" name="regresar" onclick="mostrarTarjeHeader()" value="Regresar">
                 </div> 
 
             </div>
