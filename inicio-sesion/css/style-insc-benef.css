@@ -52,7 +52,7 @@ main.inscription-main{
 
 .inscribir-conv label span{
     margin-top: 2rem;
-    margin-bottom: 1.6rem;
+    margin-bottom: 1.9rem;
     text-align: center;
 
 }
@@ -61,6 +61,7 @@ main.inscription-main{
     border-color: #707070;
     padding: 2.5rem 0;
     text-align: center;
+    font-size: 1.8rem;
 }
 
 #insc-usuario button.inscribirse-btn{

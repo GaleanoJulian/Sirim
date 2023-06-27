@@ -24,32 +24,28 @@
         
     </header>
 
+                    <?php
+                        include("../conexion-y-logica/conexion_insc-benef-_fechaConv.php");
+                    ?>
+
     <main class="inscription-main">
         <section id="insc-usuario" class="inscribir-conv">
             <div class="centrar-form">
                 <label for="inscribirse">
                     <span>Convocatoria activa</span>
-                    <input type="text" name="inscribirse" id="inscribirse">
+                    <input type="text" value="<?php echo $fechaEntrega;?>" name="inscribirse" id="inscribirse">
                 </label>
             <button type="submit" class="inscribirse-btn">Inscribirse</button>
             </div>           
         </section>
 
         <section id="consul-insc" class="inscribir-conv">
-            <table class="conv-table">
-                <thead>
-                    <th>Convocatoria</th>
-                    <th>Estado</th>
-                    <th>Fecha</th>
-                    <th>Cancelar</th>
-                </thead>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </table>
+                <section id=tabla-historialBenef>
+                    <br><br>
+                    <?php
+                        include("tabla_consultarInscripcion-Benef.php")
+                    ?>
+                </section>
         </section>
 
     </main>

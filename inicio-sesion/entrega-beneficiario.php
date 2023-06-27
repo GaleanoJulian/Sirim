@@ -15,18 +15,12 @@
 
     <main>
         <section class="entrega-user">
-            <table>
-                <thead>
-                    <th>Convocatoria</th>
-                    <th>Fecha de entrega</th>
-                    <th>Estado de entrega</th>
-                </thead>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </table>
+        <section id=tabla-historialBenef>
+                    <br><br>
+                    <?php
+                        include("tabla_consultarEntregaBenef.php")
+                    ?>
+                </section>
         </section>
     </main>
 
