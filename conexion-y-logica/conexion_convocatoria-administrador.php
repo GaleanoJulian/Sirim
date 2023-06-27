@@ -35,11 +35,6 @@ if (isset($_POST['convocar'])) {
             $eventoVigente = false;
         }
         
-        if ($eventoVigente==true) {
-            $vigencia = "Vigente";
-        } else {
-            $vigencia = "No vigente";
-        }
 
         $consulta3 = "SELECT id FROM responsable WHERE id_usuario=(SELECT id FROM usuario 
         WHERE correo='$email') ORDER BY id DESC LIMIT 1";
@@ -47,8 +42,8 @@ if (isset($_POST['convocar'])) {
         $filaConsulta3 = mysqli_fetch_assoc($resultadoConsulta3);
         $idResponsable = $filaConsulta3['id'];
 
-        $insertar2 = "INSERT INTO convocatoria (fecha_inicio, fecha_fin, fecha_entrega, vigente, id_responsable) 
-                      VALUES ('$fechaInicio', '$fechaFin', '$fechaEntrega', '$vigencia', '$idResponsable')";
+        $insertar2 = "INSERT INTO convocatoria (fecha_inicio, fecha_fin, fecha_entrega, id_responsable) 
+                      VALUES ('$fechaInicio', '$fechaFin', '$fechaEntrega', '$idResponsable')";
         $resultadoInsertar2 = mysqli_query($conection, $insertar2);
 
 
