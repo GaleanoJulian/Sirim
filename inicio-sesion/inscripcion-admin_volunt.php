@@ -24,9 +24,13 @@
     <main class="inscription-main">
         <section id="insc-usuario" class="inscribir-conv">
             <div>
+                    <?php
+                        include("../conexion-y-logica/conexion_inscripcion-adminVolunt.php");
+                    ?>
+                    <div>
                 <label for="inscribirse">
                     <span>Convocatoria activa</span>
-                    <input type="text" name="inscribirse" id="inscribirse">
+                    <input class="conv-activa" type="text" value="<?php echo $fechaEntrega;?>" name="inscribirse" id="inscribirse">
                 </label>
                 <div>
                     <label for="buscar-user">
@@ -43,9 +47,9 @@
                             </div>
                               <input type="text" placeholder="Número de documento" required />
                         </div>
+                        <button type="submit" class="inscribirse-btn">Buscar</button> 
                         <input type="text" placeholder="Usuario" />
                     </label>
-                <button type="submit" class="inscribirse-btn">Buscar</button> 
                 </div>
             <button type="submit" class="inscribirse-btn">Inscribir</button>  
             </div>
