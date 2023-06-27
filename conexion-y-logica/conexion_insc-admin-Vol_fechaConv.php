@@ -14,4 +14,5 @@ if (mysqli_num_rows($resultadoConsulta1) > 0) {
 } else {
     $fechaEntrega = 'No hay fechas programadas'; // Establecer un valor por defecto si no se obtuvo ninguna fecha
 }
+
 ?>

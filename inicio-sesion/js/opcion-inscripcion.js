@@ -10,4 +10,11 @@ function mostrarContenidoinscripcion(id) {
     // Mostrar el contenido correspondiente al ID recibido
     var contenido = document.getElementById(id);
     contenido.style.display = 'block';
+    
+    if($('#example').css('display') == 'table'){
+      $('#example').DataTable(datatTableOptions);
+    } 
+
+
   }
+

@@ -25,33 +25,22 @@
         <section id="insc-usuario" class="inscribir-conv">
             <div>
                     <?php
-                        include("../conexion-y-logica/conexion_inscripcion-adminVolunt.php");
+                        include("../conexion-y-logica/conexion_insc-admin-Vol_fechaConv.php");
                     ?>
-                    <div>
-                <label for="inscribirse">
-                    <span>Convocatoria activa</span>
-                    <input class="conv-activa" type="text" value="<?php echo $fechaEntrega;?>" name="inscribirse" id="inscribirse">
-                </label>
                 <div>
-                    <label for="buscar-user">
-                        <span>Buscar usuario</span>
-                        <div class="input-box_doc">
-                            <div class="column">             
-                              <div class="select-box">
-                                    <select>
-                                        <option hidden>Tipo de documento</option>
-                                        <option>C.C.</option>
-                                        <option>C.E.</optio>
-                                        <option>Pasaporte</option>
-                                    </select>
-                            </div>
-                              <input type="text" placeholder="Número de documento" required />
-                        </div>
-                        <button type="submit" class="inscribirse-btn">Buscar</button> 
-                        <input type="text" placeholder="Usuario" />
+                    <label for="inscribirse">
+                        <span>Convocatoria activa</span>
+                        <input class="conv-activa" type="text" value="<?php echo $fechaEntrega;?>" name="inscribirse" id="inscribirse">
                     </label>
                 </div>
-            <button type="submit" class="inscribirse-btn">Inscribir</button>  
+                <div>
+                    <section id=tabla-historial>
+                        <br><br>
+                        <?php
+                        include("tabla-inscribir-usuario.php")
+                        ?>
+                    </section> 
+                </div> 
             </div>
                      
         </section>

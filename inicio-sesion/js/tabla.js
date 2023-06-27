@@ -7,13 +7,13 @@ let datatTableOptions={
     {
         extend: "excelHtml5", //para descargar formato excel
         text:"<i class='fa-solid fa-file-csv'></i>", //enlace de font-awesome
-        titleAttr:"Exportar a PDF", //mensaje al pasar el mouse
+        titleAttr:"Exportar a Excel", //mensaje al pasar el mouse
         className:"btn btn-success", //color
     },
     {
         extend: "pdfHtml5", //para descargar formato excel
         text:"<i class='fa-solid fa-file-pdf'></i>", //enlace de font-awesome
-        titleAttr:"Exportar a Excel", //mensaje al pasar el mouse
+        titleAttr:"Exportar a PDF", //mensaje al pasar el mouse
         className:"btn btn-danger", //color
     },
     {
