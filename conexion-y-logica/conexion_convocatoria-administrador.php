@@ -34,7 +34,8 @@ if (isset($_POST['convocar'])) {
         } else {
             $eventoVigente = false;
         }
-        
+
+           
 
         $consulta3 = "SELECT id FROM responsable WHERE id_usuario=(SELECT id FROM usuario 
         WHERE correo='$email') ORDER BY id DESC LIMIT 1";
