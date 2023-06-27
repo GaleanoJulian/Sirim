@@ -28,6 +28,7 @@ if($varsesion==null || $varsesion==''){ //un if para preguntar en donde si la va
     <script src="./js/fechas-convocatoria.js"></script>
     <script src="./js/opcion-inventario.js"></script>
     <script src="../js/espacioblanco.js"></script>
+    <script src="./js/tabla-entregasAdminVol.js"></script>
     
      <!-- data table -->
      <link 
@@ -115,7 +116,7 @@ if($varsesion==null || $varsesion==''){ //un if para preguntar en donde si la va
             <?php } ?>
 
             <div class="item">
-                <a href="../conexion-y-logica/mostrar_entrega-user.php">
+                <a href="../conexion-y-logica/mostrar_entrega-user.php" onclick="loadDeliveryTable()">
                     <div class="icon"><img src="images/entrega.png" alt=""></div>
                     <div class="title"><span>Entrega de mercados</span></div>
                 </a>

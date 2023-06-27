@@ -14,49 +14,12 @@
     </header>
 
     <main>
-        <div>
-            <label for="buscar-user">
-                <span>Buscar usuario</span>
-                <div class="input-box_doc">
-                    <div class="column">             
-                      <div class="select-box">
-                            <select>
-                                <option hidden>Tipo de documento</option>
-                                <option>C.C.</option>
-                                <option>C.E.</optio>
-                                <option>Pasaporte</option>
-                            </select>
-                    </div>
-                      <input type="text" placeholder="Número de documento" required />
-                </div>
-            </label>
-        <button type="submit" class="inscribirse-btn">Buscar</button> 
-        </div><br>
         <section class="entrega-user">
-            <table>
-                <thead>
-                    <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>Tipo de documento</th>
-                    <th>Número de documento</th>
-                    <th>Convocatoria</th>
-                    <th>Fecha de entrega</th>
-                    <th>Estado de aprobación</th>
-                    <th>Estado de entrega</th>
-                    <th>Registrar entrega</th>
-                </thead>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </table>
+            <section class="tablas-entrega">
+                <?php
+                    include("tabla-historial-entregasAdminVol.php")
+                 ?>
+            </section>
         </section>
     </main>
 
