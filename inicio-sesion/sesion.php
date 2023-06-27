@@ -80,26 +80,7 @@ if($varsesion==null || $varsesion==''){ //un if para preguntar en donde si la va
             
             <div class="separator"></div>
 
-            <div class="item">
-                
-                <a href="../conexion-y-logica/mostrar_inscripcion_user.php">
-                    <div class="icon"><img src="images/inscripcion.png" alt=""></div>
-                    <div class="title"><span>Inscripciones</span></div>
-                </a>
-            </div>
-            
-            <div class="separator"></div>
-
-            <div class="item">
-                <a href="../conexion-y-logica/mostrar_entrega-user.php">
-                    <div class="icon"><img src="images/entrega.png" alt=""></div>
-                    <div class="title"><span>Entrega de mercados</span></div>
-                </a>
-            </div>
-
             <?php if ($id_rol != 3) { ?>
-        
-            <div class="separator admin-vol"></div>
 
             <div class="item admin-vol">
                 <a href="./convocatoria.php" onclick="addDateEvents()">
@@ -107,8 +88,21 @@ if($varsesion==null || $varsesion==''){ //un if para preguntar en donde si la va
                     <div class="title"><span>Convocatorias</span></div>
                 </a>
             </div>
-            
             <div class="separator admin-vol"></div>
+
+            <?php } ?>
+
+            <div class="item">
+                
+                <a href="../conexion-y-logica/mostrar_inscripcion_user.php">
+                    <div class="icon"><img src="images/inscripcion.png" alt=""></div>
+                    <div class="title"><span>Inscripciones</span></div>
+                </a>
+            </div>
+
+            <div class="separator"></div>
+
+            <?php if ($id_rol != 3) { ?>
 
             <div class="item">
                 <a href="./tarjetas-inventario.php">
@@ -116,8 +110,20 @@ if($varsesion==null || $varsesion==''){ //un if para preguntar en donde si la va
                     <div class="title"><span>Inventario</span></div>
                 </a>
             </div>
+
+            <div class="separator admin-vol"></div>
+            <?php } ?>
+
+            <div class="item">
+                <a href="../conexion-y-logica/mostrar_entrega-user.php">
+                    <div class="icon"><img src="images/entrega.png" alt=""></div>
+                    <div class="title"><span>Entrega de mercados</span></div>
+                </a>
+            </div>
             
             <div class="separator admin-vol"></div>
+            
+            <?php if ($id_rol != 3) { ?>
 
             <div class="item admin-vol">
                 <a href="lista-compras.html">
@@ -135,10 +141,9 @@ if($varsesion==null || $varsesion==''){ //un if para preguntar en donde si la va
                     <div class="title"><span>Gestión de usuarios</span></div>
                 </a>
             </div>
-
-            <?php } ?>
+            <div class="separator admin-vol"></div>
+            <?php } ?>          
             
-            <div class="separator"></div>
 
         </div>
         <input class="btn-sesion" type="button" value="Cerrar sesión" onclick="window.location.href='./cerrar_sesion.php'"/><br><br>
