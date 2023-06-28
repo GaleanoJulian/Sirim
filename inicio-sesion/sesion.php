@@ -29,6 +29,7 @@ if($varsesion==null || $varsesion==''){ //un if para preguntar en donde si la va
     <script src="./js/opcion-inventario.js"></script>
     <script src="../js/espacioblanco.js"></script>
     <script src="./js/tabla-entregasAdminVol.js"></script>
+    <script src="./js/gestion-usuario.js"></script>
     
      <!-- data table -->
      <link 
@@ -137,7 +138,7 @@ if($varsesion==null || $varsesion==''){ //un if para preguntar en donde si la va
             <div class="separator admin-vol"></div>
 
             <div class="item admin-vol">
-                <a href="#">
+                <a href="gestion-usuario.php" onclick="loadGestionTable()">
                     <div class="icon"><img src="images/gestion_user.png" alt=""></div>
                     <div class="title"><span>Gestión de usuarios</span></div>
                 </a>

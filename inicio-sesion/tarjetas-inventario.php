@@ -94,10 +94,7 @@
                 </section>
 
                 <div class="row-inventario">
-            
-                        <input class="btn" name="ingresar-producto" type="submit" value="Ingresar producto nuevo">
-
-                        <input class="btn" name="regresar" onclick="mostrarTarjeHeader()" type="submit" value="Regresar">
+                    <input class="btn" name="regresar" onclick="mostrarTarjeHeader()" type="submit" value="Regresar">
                 </div>
             </div>
 
@@ -183,9 +180,6 @@
                                 <input class="btn" type="submit" value="Ingresar">
                             </div>
 
-                            <div class="input-box">
-                                <input class="btn" type="submit" value="Consultar productos">
-                            </div>
                             <div class="input-box">
                                 <input class="btn" name="regresar" onclick="mostrarTarjeHeader()" type="submit" value="Regresar">
                             </div>
