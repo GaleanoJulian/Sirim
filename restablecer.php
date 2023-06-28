@@ -22,7 +22,7 @@
     </header>
 
     <main class="restablecer">
-    <form class="form-restablecer" method="post">
+    <form class="form-restablecer" action="recovery.php" method="post">
     <h2>¿Olvidaste tu contraseña?</h2><br>
     <p>Ingresa tu correo electrónico para recibir un enlace de restablecimiento de contraseña.</p> <br>
     <div class="input-box">
