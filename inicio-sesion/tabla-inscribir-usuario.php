@@ -59,7 +59,9 @@
               <td><?php echo $mostrar['tipo_doc_id']?></td>
               <td><?php echo $mostrar['doc_identidad']?></td>
               <td><?php echo $mostrar['rol']?></td>
-              <td>(botones)</td>
+              <td><button style=" padding: 0.3rem 1rem; background: #3FABDD; color:white; 
+              cursor: pointer; border-radius: 1rem; border-top: none; 
+              border-left: none;">Inscribir</button></td>
 
             </tr>
             <?php
