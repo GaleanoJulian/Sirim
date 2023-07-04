@@ -12,7 +12,7 @@
         exit();
     }
 
-    //INSERT INTO
+//INSERT INTO
 
     function storeCustomer($customerInput){
 
@@ -57,10 +57,14 @@
         }
     }
 
-    //Fin INSERT INTO
+//Fin INSERT INTO
 
 
-    //SELECT
+//SELECT
+
+    //En Gestión de usuarios
+
+        //Función para traer todos los datos de la lista de usuarios
     
     function getUserList(){
         global $conection;
@@ -101,6 +105,8 @@
         }
     }
 
+        //Función para traer los roles de los usuarios
+
     function getUserRoles(){
         global $conection;
 
@@ -137,6 +143,8 @@
             return json_encode($data);
         }
     }
+
+        //Función para traer datos del usuario sobre información de rol en otras tablas
 
     function getUsersWithRole(){
         global $conection;
@@ -188,9 +196,9 @@
 
     }
 
-    //Fin SELECT
+//Fin SELECT
 
-    //UPDATE
+//UPDATE Ejemplo unicamente
 
     function updateCustomer($customerInput, $customerParams){
 
@@ -247,11 +255,14 @@
         }
     }
 
-    //Fin UPDATE
+//Fin UPDATE
 
 
-    //UPDATE que hizo Cami
+//UPDATE
 
+    // En Gestión de usuarios
+
+        // Función para cambiar de rol a los usuarios
 
     function updateUserRole($userId, $newRoleId){
         global $conection;
@@ -262,9 +273,9 @@
         if($query_run){
             $data = [
                 'status' => 200,
-                'message' => 'User updated successfully'
+                'message' => 'User Rol updated successfully'
             ];
-            header("HTTP/1.0 200 User updated successfully");
+            header("HTTP/1.0 200 User Rol updated successfully");
             return json_encode($data);
         }
         else{
@@ -278,35 +289,55 @@
 
     }
 
-    //Fin UPDATE Cami
+        //Función para cambiar el estado de los usuarios
+
+    function updateUserStatus($userId,$newUserStatus){
+        global $conection;
+        $query = "UPDATE usuario SET estado = '$newUserStatus' WHERE id=$userId";
+        $query_run = mysqli_query($conection, $query);
+
+        if($query_run){
+            $data = [
+                'status' => 200,
+                'message' => ' User Status updated successfully'
+            ];
+            header("HTTP/1.0 200 User Status updated successfully");
+            return json_encode($data);
+        }else{
+            $data = [
+                'status' => 500,
+                'message' => 'Internal server error'
+            ];
+            header("HTTP/1.0 500 Internal server error");
+            return json_encode($data);
+        }
+    }
+
+    //Fin Gestión de usuarios
+
+//Fin UPDATE
 
 
-    //DELETE
+//DELETE
 
-    function deleteCustomer($customerParams){
+    function deleteUser($idUser){
 
         global $conection;
 
-        if(!isset($customerParams['id'])){
+        if($idUser == null){
 
-            return error422('Customer id not found in URL');
-
-        }elseif($customerParams['id'] == null){
-
-            return error422('Enter the customer id');
+            return error422('Enter the user id');
 
         }
 
-        $customerId = mysqli_real_escape_string($conection, $customerParams['id']); //ejemplo
-
-        $query = "DELETE FROM customers WHERE id='$customerId' LIMIT 1";
-        $result = mysqli_query($conection, $query);
+        $query = "DELETE FROM usuario WHERE id=$idUser LIMIT 1";
+        $result = mysqli_query($conection,$query);
 
         if($result){
 
             $data = [
                 'status' => 200,
-                'message' => 'Customer Deleted Succesfully',
+                'message' => 'User Deleted Succesfully',
             ];
             header("HTTP/1.0 200 OK");
             return json_encode($data);
@@ -315,14 +346,14 @@
 
             $data = [
                 'status' => 404,
-                'message' => 'Customer Not Found',
+                'message' => 'User Not Found',
             ];
             header("HTTP/1.0 400 Not Found");
             return json_encode($data);
 
         }
-
     }
 
-   //Fin DELETE
+//Fin DELETE
+
 ?>

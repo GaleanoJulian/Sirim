@@ -7,4 +7,6 @@ async function loadGestionTable() {
     setUserRole();
     setUserStatus();
     addChangeEvents();
+    addChangeStatus();
+    addDeleteUserEvent();
 };

@@ -15,6 +15,13 @@
             $result = updateUserRole($inputData['userId'], $inputData['newRoleId']);
             echo $result;
         }
+        
+        elseif($functionName == 'updateUserStatus'){
+            $inputData = json_decode(file_get_contents("php://input"), true);
+            $result = updateUserStatus($inputData['userId'], $inputData['newUserStatus']);
+            echo $result;
+        }
+
         else{
             $data = [
                 'status' => 405,
