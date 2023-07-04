@@ -37,19 +37,18 @@
       </tr>
     </thead>
     <tfoot>
-              <tr>
-                <th>Nombres</th>
-                <th>Apellidos</th>
-                <th>Tipo de documento</th>
-                <th>Documento de identidad</th>
-                <th>Rol</th>
-                <th>Estado usuario</th>
-                <th>Eliminar</th>
-              </tr>
-          </tfoot>
-        <tbody>
-          
-          </tbody>
+      <tr>
+        <th>Nombres</th>
+        <th>Apellidos</th>
+        <th>Tipo de documento</th>
+        <th>Documento de identidad</th>
+        <th>Rol</th>
+        <th>Estado usuario</th>
+        <th>Eliminar</th>
+      </tr>
+    </tfoot>
+    <tbody>  
+    </tbody>
 
     </table>
   </div>
