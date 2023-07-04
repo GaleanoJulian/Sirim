@@ -32,60 +32,27 @@
         <th>Tipo de documento</th>
         <th>Documento de identidad</th>
         <th>Rol</th>
-        <th>Cambiar Rol</th>
         <th>Estado usuario</th>
         <th>Eliminar</th>
       </tr>
     </thead>
-        <tbody>
-              <?php 
-              include("../conexion-y-logica/conexion.php");
-    
-              $consultaTI= "SELECT
-              info_usuario.id,
-              info_usuario.nombres AS nombres, 
-              info_usuario.apellidos AS apellidos, 
-              info_usuario.tipo_doc_id AS tipo_doc_id, 
-              info_usuario.doc_identidad AS doc_identidad,
-              rol.rol AS rol
-                FROM info_usuario
-                INNER JOIN usuario ON usuario.id=info_usuario.id_usuario
-                INNER JOIN rol ON rol.id=usuario.id_rol ORDER BY info_usuario.id";
-              $resultadoTI=mysqli_query($conection, $consultaTI);         
-              
-              while($mostrar=mysqli_fetch_array($resultadoTI)){
-            ?>
-            <tr>
-                <td><?php echo $mostrar['nombres']?></td>
-                <td><?php echo $mostrar['apellidos']?></td>
-                <td><?php echo $mostrar['tipo_doc_id']?></td>
-                <td><?php echo $mostrar['doc_identidad']?></td>
-                <td><?php echo $mostrar['rol']?></td>
-                <td>Cambiar Rol</td>
-                <td>Estado usuario</td>
-                <td>Eliminar</td>
-
-            </tr>
-            <?php
-              }
-            ?>
-          </tbody>
-          <tfoot>
+    <tfoot>
               <tr>
                 <th>Nombres</th>
                 <th>Apellidos</th>
                 <th>Tipo de documento</th>
                 <th>Documento de identidad</th>
                 <th>Rol</th>
-                <th>Cambiar Rol</th>
                 <th>Estado usuario</th>
                 <th>Eliminar</th>
               </tr>
-        </tfoot>
+          </tfoot>
+        <tbody>
+          
+          </tbody>
+
     </table>
-    
   </div>
-  
 </div>
 <br><br>
     

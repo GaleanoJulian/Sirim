@@ -18,7 +18,7 @@
         <section class="entrega-user">
             <section class="tablas-entrega">
                 <?php
-                    include("tabla-gestion_usuario.php")
+                    include("tabla-gestion_usuario2.php")
                  ?>
             </section>
         </section>

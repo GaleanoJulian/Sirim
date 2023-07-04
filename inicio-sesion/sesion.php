@@ -30,6 +30,7 @@ if($varsesion==null || $varsesion==''){ //un if para preguntar en donde si la va
     <script src="../js/espacioblanco.js"></script>
     <script src="./js/tabla-entregasAdminVol.js"></script>
     <script src="./js/gestion-usuario.js"></script>
+    <script src="./js/site.js"></script>
     
      <!-- data table -->
      <link 
