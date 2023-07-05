@@ -238,6 +238,28 @@ async function deleteData(functionName, inputData){
         });
     }
     //Fin consultar y aprobar inscripciones desde admin-vol
+
+    //Consultar inscripciones desde beneficiario
+
+    function loadTableConsInscBenef(items, tableId) {
+        const table = document.getElementById(tableId);
+        var tbodyRef = document.getElementById(tableId).getElementsByTagName('tbody')[0];
+
+        var index = 1;
+        items.forEach( item => {
+        let row = tbodyRef.insertRow();
+        let convocatoria = row.insertCell(0);
+        convocatoria.innerHTML = item.idConvocatoria;
+        let fechaConv = row.insertCell(1);
+        fechaConv.innerHTML = item.fechaEntrega;
+        let estado = row.insertCell(2);
+        estado.innerHTML = item.estadoInscripcion;
+
+            index++;
+        });
+    }
+
+    //Fin consultar inscripciones desde beneficiario
 //Fin inscripciones
 
 //Inicio Tarjetas Inventario

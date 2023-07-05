@@ -34,7 +34,8 @@ async function mostrarContenidoinscripcion(id) {
     // Tabla segundo botón de inscripción beneficiario
 
     if($('#example3').css('display') == 'table' && !table3Initialized){
-      
+      var tableData = (await readData("getUsersInscInfo")).data;
+      loadTableConsInscBenef(tableData, "example3"); 
       $('#example3').DataTable(datatTableOptions);
 
       //hacer lo mismo que el anterior if pero cambiando la función que llama la tabla

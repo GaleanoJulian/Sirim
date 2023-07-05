@@ -371,6 +371,61 @@
    
     //Fin consultar y aprobar convocatorias desde admin-vol
 
+    //Consultar convocatorias desde beneficiario
+
+    function getUsersInscInfo(){
+        global $conection;
+
+        session_start();
+        $email=$_SESSION['email'];
+
+
+        $query= "SELECT
+        usuario.id AS idUser,
+        usuario.estado AS estado,
+        convocatoria.id AS idConvocatoria,
+        convocatoria.fecha_entrega AS fechaEntrega,
+        inscripcion.aprobado AS estadoInscripcion 
+        FROM usuario
+        INNER JOIN inscripcion ON inscripcion.id_usuario = usuario.id
+        INNER JOIN convocatoria ON convocatoria.id = inscripcion.id_convocatoria 
+        WHERE usuario.correo = '$email'";
+        $query_run = mysqli_query($conection, $query);
+
+        if($query_run){
+            if(mysqli_num_rows($query_run) > 0){
+                $res = mysqli_fetch_all($query_run, MYSQLI_ASSOC);
+
+                $data = [
+                    'status' => 200,
+                    'message' => 'User data fetched successfully',
+                    'data' => $res
+                ];
+                header("HTTP/1.0 200 User data fetched successfully");
+                return json_encode($data);
+            }
+            else{
+                $data = [
+                    'status' => 404,
+                    'message' => 'No user data found'
+                ];
+                header("HTTP/1.0 404 No user data found");
+                return json_encode($data);
+            }
+        }
+        else{
+            $data = [
+                'status' => 500,
+                'message' => 'Internal server error'
+            ];
+            header("HTTP/1.0 500 Internal server error");
+            return json_encode($data);
+        }
+
+    }
+    
+    //Fin consultar convocatorias desde beneficiario
+
     
 
 //Fin SELECT

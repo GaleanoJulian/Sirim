@@ -25,50 +25,23 @@
   <div class="row" >
     <table id="example3" class="table table-striped" >
     <caption>Inscripcion de usuarios </caption>
-    <thead>
-      <tr>
-        <th>Convocatoria</th>
-        <th>Fecha</th>
-        <th>Estado</th>
-        <th>Cancelar</th>
-    </thead>
-        <tbody>
-              <?php /*
-              include("../conexion-y-logica/conexion.php");
-    
-              $consultaTI= "SELECT
-              info_usuario.id,
-              info_usuario.nombres AS nombres, 
-              info_usuario.apellidos AS apellidos, 
-              info_usuario.tipo_doc_id AS tipo_doc_id, 
-              info_usuario.doc_identidad AS doc_identidad,
-              rol.rol AS rol
-                FROM info_usuario
-                INNER JOIN usuario ON usuario.id=info_usuario.id_usuario
-                INNER JOIN rol ON rol.id=usuario.id_rol ORDER BY info_usuario.id";
-              $resultadoTI=mysqli_query($conection, $consultaTI);         
-              
-              while($mostrar=mysqli_fetch_array($resultadoTI)){
-            */?>
-            <tr>
-                <td>Convocatoria</td>
-                <td>Fecha</td>
-                <td>Estado</td>
-                <td>Cancelar</td>
+      <thead>
+        <tr>
+          <th>Convocatoria</th>
+          <th>Fecha</th>
+          <th>Estado</th>
 
-            </tr>
-            <?php
-             // }
-            ?>
-          </tbody>
-          <tfoot>
-              <tr>
-                <th>Convocatoria</th>
-                <th>Fecha</th>
-                <th>Estado</th>
-                <th>Cancelar</th>
-              </tr>
-        </tfoot>
+      </thead>
+      <tbody>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>Convocatoria</th>
+          <th>Fecha</th>
+          <th>Estado</th>
+
+        </tr>
+      </tfoot>
     </table>
     
   </div>

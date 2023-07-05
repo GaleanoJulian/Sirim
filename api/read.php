@@ -30,6 +30,10 @@
             $inscripcionList = getUsersInscripcion();
             echo $inscripcionList;
         }
+        elseif($functionName == "getUsersInscInfo"){
+            $inscripcionList = getUsersInscInfo();
+            echo $inscripcionList;
+        }
         
     }
     else{
