@@ -106,21 +106,12 @@
                 
                     <form action="#" class="form">
                         
-                        <div class="input-box">
-                            <label>Nombre del producto</label>
-                            <input type="text" placeholder="Por ejemplo: Arroz" required />
-                        </div>
-
-                        <div class="input-box">
-                            <label>Categoría</label><br>          
+                    <div class="input-box">
+                            <label>Presentación</label><br>
                             <div class="select-box">
-                                <select>
-                                <option hidden>Escoja categoría</option>
-                                <option>Perecedero</option>
-                                <option>No perecedero</option>
-                                </select>
-                            </div>
-                        </div>
+                                <select class="producto_"></select>
+                            </div>         
+                        </div> 
 
                         <div class="input-box">
                             <label>Presentación</label><br>

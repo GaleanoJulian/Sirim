@@ -22,6 +22,10 @@
             $userList = getUsersWithRole();
             echo $userList;
         }
+        elseif($functionName == "getProdcutos"){
+            $productsList = getProductos();
+            echo $productsList;
+        }
         elseif($functionName == "getPresentacionProd"){
             $presentacionList = getPresentacionProd();
             echo $presentacionList;

@@ -266,14 +266,14 @@ async function deleteData(functionName, inputData){
 
     //Inicio Ingresar producto al almacén
 
-    async function fillPresentacionSelect(){
-        var newOptions = (await readData("getPresentacionProd")).data;
+    async function fillProductoSelect(){
+        var newOptions = (await readData("getProductos")).data;
 
-        var $el = $("presentacionProd_");
+        var $el = $(".producto_");
         $el.empty(); // remove old options
         newOptions.forEach(x => {
             $el.append($("<option></option>")
-            .attr("value", x.id).text(x.presentacion));
+            .attr("value", x.id).text(x.nombre));
         });
     }
 

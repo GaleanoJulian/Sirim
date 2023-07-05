@@ -138,6 +138,43 @@
 //SELECT
 
     //En tarjetas - Ingresar Productos Nuevos al almacén
+    function getProductos (){
+        global $conection;
+    $query = "SELECT * FROM producto";
+    $query_run = mysqli_query($conection,$query);
+
+    if($query_run){
+        if(mysqli_num_rows($query_run) > 0){
+            $res = mysqli_fetch_all($query_run, MYSQLI_ASSOC);
+
+            $data = [
+                'status' => 200,
+                'message' => 'Presentacion list fetched successfully',
+                'data' => $res
+            ];
+            header("HTTP/1.0 200 Presentacion list fetched successfully");
+            return json_encode($data);
+        }
+        else{
+            $data = [
+                'status' => 404,
+                'message' => 'No presentacion data found'
+            ];
+            header("HTTP/1.0 404 No presentacion data found");
+            return json_encode($data);
+        }
+    }
+    else{
+        $data = [
+            'status' => 500,
+            'message' => 'Internal server error'
+        ];
+        header("HTTP/1.0 500 Internal server error");
+        return json_encode($data);
+    }
+
+
+    }
 
     function getPresentacionProd (){
         global $conection;
