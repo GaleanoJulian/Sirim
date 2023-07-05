@@ -14,34 +14,104 @@
 
 //INSERT INTO
 
-    function storeCustomer($customerInput){
+    //En inscribir usuarios desde admin-vol
 
-        global $conection;
+    function insertDataInscription($userId){
         
-        $name = mysqli_real_escape_string($conection, $customerInput['name']); //ejemplo
-        $email = mysqli_real_escape_string($conection, $customerInput['email']); //ejemplo
-        $phone = mysqli_real_escape_string($conection, $customerInput['phone']); //ejemplo
+        global $conection;
 
-        if(empty(trim($name))){
+        session_start();
+        $email=$_SESSION['email']; //Correo del que hace la inscripción
 
-            return error422('Enter your name');
+        $consulta1="SELECT id FROM usuario WHERE correo='$email'";
+        $resultadoConsulta1 = mysqli_query($conection, $consulta1);
+        $followingdataUser = $resultadoConsulta1->fetch_assoc();
+        $id_userResp = $followingdataUser['id']; //id de la persona que hace la inscripción (para hallar al responsable)
 
-        }elseif(empty(trim($email))){
+        //Traer el id de la tabla tareas_rol para la tarea de inscribir usuarios en donde el rol del usuario sea el de quien hace la inscripción
+        $consulta2 = "SELECT id FROM tareas_rol WHERE id_tarea='2' AND id_rol=(SELECT id_rol FROM usuario WHERE correo='$email')";
+        $resultadoConsulta2 = mysqli_query($conection, $consulta2);
+        $followingdataTarea = $resultadoConsulta2->fetch_assoc();
+        $id_tarea_rol = $followingdataTarea['id']; //id de la tabla tareas_rol para determinar al responsable
 
-            return error422('Enter your email');
 
-        }elseif(empty(trim($email))){
+        //Insertar al responsable de la tarea en la tabla responsable para poder obtener el id del responsable
+        $insertar1 = "INSERT INTO responsable (id_tareaxrol, id_usuario) VALUES ($id_tarea_rol, $id_userResp)";
+        $resultadoInsertar1 = mysqli_query($conection, $insertar1);
+        
+        
+        //Consultar el id del responsable de hacer la convocatoria para poder obtenerlo para la tabla de inscripcion
+        $consulta3 = "SELECT id FROM responsable WHERE id_usuario='$id_userResp' ORDER BY id DESC LIMIT 1";
+        $resultadoConsulta3 = mysqli_query($conection, $consulta3);
+        $filaConsulta3 = mysqli_fetch_assoc($resultadoConsulta3);
+        $idResponsable = $filaConsulta3['id']; // id del responsable que se inserta en la columna id_responsable de la tabla inscrpción
 
-            return error422('Enter your phone');
+        //de aquí se consigue la lista de id de usuarios a los que se van a inscribir
+        $consulta4= "SELECT id AS idUserInscribir FROM usuario WHERE id = $userId";
+        $resultadoConsulta4 = mysqli_query($conection, $consulta4);
+        $filaConsulta4 = mysqli_fetch_assoc($resultadoConsulta4);
+        $idUsuarioInsc = $filaConsulta4['idUserInscribir'];
+        
+        //consultar el id de la última convocatoria hecha
+        $consulta5="SELECT MAX(id) AS idConvocatoria FROM convocatoria";
+        $resultadoConsulta5 = mysqli_query($conection, $consulta5);
+        $filaConsulta5 = mysqli_fetch_assoc($resultadoConsulta5);
+        $idConvocatoria = $filaConsulta5['idConvocatoria'];
 
+        $query = "INSERT INTO 
+                    inscripcion (aprobado, id_convocatoria, id_usuario, id_responsable) 
+                VALUES 
+                    ('aprobado','$idConvocatoria','$idUsuarioInsc','$idResponsable')";
+        $query_run = mysqli_query($conection, $query);
+
+        if($query_run){
+            $data = [
+                'status' => 200,
+                'message' => 'Customer Created Succesfully'
+            ];
+            header("HTTP/1.0 201 Created");
+            return json_encode($data);
+        }else{
+            $data = [
+                'status' => 500,
+                'message' => 'Internal server error'
+            ];
+            header("HTTP/1.0 500 Internal server error");
+            return json_encode($data);                
         }
-        else{
-            $query ="INSERT INTO customers(name,email,phone) VALUES ('$name','$email','$phone')";
-            $result = mysqli_query($conection,$query);
+      
+    }
 
-            if($result){
+        //En inscribir usuario desde beneficiario
+
+        function insertDataInscrBenef(){
+        
+            global $conection;
+    
+            session_start();
+            $email=$_SESSION['email']; //Correo del que hace la inscripción
+    
+            $consulta1="SELECT id FROM usuario WHERE correo='$email'";
+            $resultadoConsulta1 = mysqli_query($conection, $consulta1);
+            $followingdataUser = $resultadoConsulta1->fetch_assoc();
+            $id_userResp = $followingdataUser['id']; //id de la persona que hace la inscripción (en este caso el usuario)
+
+            
+            //consultar el id de la última convocatoria hecha
+            $consulta5="SELECT MAX(id) AS idConvocatoria FROM convocatoria";
+            $resultadoConsulta5 = mysqli_query($conection, $consulta5);
+            $filaConsulta5 = mysqli_fetch_assoc($resultadoConsulta5);
+            $idConvocatoria = $filaConsulta5['idConvocatoria'];
+    
+            $query = "INSERT INTO 
+                        inscripcion (aprobado, id_convocatoria, id_usuario) 
+                    VALUES 
+                        ('por aprobar','$idConvocatoria','$id_userResp')";
+            $query_run = mysqli_query($conection, $query);
+    
+            if($query_run){
                 $data = [
-                    'status' => 201,
+                    'status' => 200,
                     'message' => 'Customer Created Succesfully'
                 ];
                 header("HTTP/1.0 201 Created");
@@ -54,13 +124,58 @@
                 header("HTTP/1.0 500 Internal server error");
                 return json_encode($data);                
             }
+          
         }
-    }
+
+
+    //Fin inscribir usuarios desde admin-vol
+
+    //En tarjetas - Ingresar Productos Nuevos al almacén
 
 //Fin INSERT INTO
 
 
 //SELECT
+
+    //En tarjetas - Ingresar Productos Nuevos al almacén
+
+    function getPresentacionProd (){
+        global $conection;
+    $query = "SELECT * FROM presentacion_prod";
+    $query_run = mysqli_query($conection,$query);
+
+    if($query_run){
+        if(mysqli_num_rows($query_run) > 0){
+            $res = mysqli_fetch_all($query_run, MYSQLI_ASSOC);
+
+            $data = [
+                'status' => 200,
+                'message' => 'Presentacion list fetched successfully',
+                'data' => $res
+            ];
+            header("HTTP/1.0 200 Presentacion list fetched successfully");
+            return json_encode($data);
+        }
+        else{
+            $data = [
+                'status' => 404,
+                'message' => 'No presentacion data found'
+            ];
+            header("HTTP/1.0 404 No presentacion data found");
+            return json_encode($data);
+        }
+    }
+    else{
+        $data = [
+            'status' => 500,
+            'message' => 'Internal server error'
+        ];
+        header("HTTP/1.0 500 Internal server error");
+        return json_encode($data);
+    }
+
+
+    }
 
     //En Gestión de usuarios
 
@@ -144,7 +259,7 @@
         }
     }
 
-        //Función para traer datos del usuario sobre información de rol en otras tablas
+    //Sirve para otras también//Función para traer datos del usuario sobre información de rol en otras tablas
 
     function getUsersWithRole(){
         global $conection;
@@ -196,67 +311,69 @@
 
     }
 
-//Fin SELECT
+    //Para consultar y aprobar inscripciones desde admin-vol
 
-//UPDATE Ejemplo unicamente
-
-    function updateCustomer($customerInput, $customerParams){
-
-        if(!isset($customerParams['id'])){
-
-            return error422('Customer id not found in URL');
-
-        }elseif($customerParams['id'] == null){
-
-            return error422('Enter the customer id');
-
-        }
-
+    function getUsersInscripcion(){
         global $conection;
 
-        $customerId = mysqli_real_escape_string($conection, $customerParams['id']); //ejemplo
-        
-        $name = mysqli_real_escape_string($conection, $customerInput['name']); //ejemplo
-        $email = mysqli_real_escape_string($conection, $customerInput['email']); //ejemplo
-        $phone = mysqli_real_escape_string($conection, $customerInput['phone']); //ejemplo
+        $query= "SELECT
+        info_usuario.id AS infoUsuarioId,
+        info_usuario.nombres AS nombres, 
+        info_usuario.apellidos AS apellidos, 
+        info_usuario.tipo_doc_id AS tipo_doc_id, 
+        info_usuario.doc_identidad AS doc_identidad,
+        rol.rol AS rolUser,
+        rol.id AS rolId,
+        usuario.id AS idUser,
+        usuario.estado AS estado,
+        convocatoria.id AS idConvocatoria,
+		convocatoria.fecha_entrega AS fechaEntrega,
+		inscripcion.aprobado AS estadoInscripcion 
+        FROM info_usuario
+        INNER JOIN usuario ON usuario.id=info_usuario.id_usuario
+        INNER JOIN rol ON rol.id=usuario.id_rol
+        INNER JOIN inscripcion ON inscripcion.id_usuario=usuario.id
+        INNER JOIN convocatoria ON convocatoria.id=inscripcion.id_convocatoria
+        ORDER BY info_usuario.id";
+        $query_run = mysqli_query($conection, $query);
 
-        if(empty(trim($name))){
+        if($query_run){
+            if(mysqli_num_rows($query_run) > 0){
+                $res = mysqli_fetch_all($query_run, MYSQLI_ASSOC);
 
-            return error422('Enter your name');
-
-        }elseif(empty(trim($email))){
-
-            return error422('Enter your email');
-
-        }elseif(empty(trim($email))){
-
-            return error422('Enter your phone');
-
-        }
-        else{
-            $query ="UPDATE customers SET name='$name', email='$email', phone='$phone' WHERE id='$customerId' LIMIT 1";
-            $result = mysqli_query($conection,$query);
-
-            if($result){
                 $data = [
                     'status' => 200,
-                    'message' => 'Customer Updated Succesfully'
+                    'message' => 'User data fetched successfully',
+                    'data' => $res
                 ];
-                header("HTTP/1.0 200 Success");
+                header("HTTP/1.0 200 User data fetched successfully");
                 return json_encode($data);
-            }else{
+            }
+            else{
                 $data = [
-                    'status' => 500,
-                    'message' => 'Internal server error'
+                    'status' => 404,
+                    'message' => 'No user data found'
                 ];
-                header("HTTP/1.0 500 Internal server error");
-                return json_encode($data);                
+                header("HTTP/1.0 404 No user data found");
+                return json_encode($data);
             }
         }
+        else{
+            $data = [
+                'status' => 500,
+                'message' => 'Internal server error'
+            ];
+            header("HTTP/1.0 500 Internal server error");
+            return json_encode($data);
+        }
+
     }
+   
+    //Fin consultar y aprobar convocatorias desde admin-vol
 
-//Fin UPDATE
+    
 
+//Fin SELECT
 
 //UPDATE
 
@@ -314,6 +431,61 @@
     }
 
     //Fin Gestión de usuarios
+
+    //Inscripcion de usuarios
+
+            //Función para cambiar el estado de los usuarios
+
+            function updateUserInscripcion($userId,$newUserInscripcion){
+                global $conection;
+
+                session_start();
+                $email=$_SESSION['email']; //Correo del que hace la novedad de la inscripcion
+
+                $consulta1="SELECT id FROM usuario WHERE correo='$email'";
+                $resultadoConsulta1 = mysqli_query($conection, $consulta1);
+                $followingdataUser = $resultadoConsulta1->fetch_assoc();
+                $id_userResp = $followingdataUser['id']; //id de la persona que hace la novedad de la inscripción (para hallar al responsable)
+
+                //Traer el id de la tabla tareas_rol para la tarea de inscribir usuarios en donde el rol del usuario sea el de quien hace la novedad de la inscripción
+                $consulta2 = "SELECT id FROM tareas_rol WHERE id_tarea='2' AND id_rol=(SELECT id_rol FROM usuario WHERE correo='$email')";
+                $resultadoConsulta2 = mysqli_query($conection, $consulta2);
+                $followingdataTarea = $resultadoConsulta2->fetch_assoc();
+                $id_tarea_rol = $followingdataTarea['id']; //id de la tabla tareas_rol para determinar al responsable
+
+
+                //Insertar al responsable de la tarea en la tabla responsable para poder obtener el id del responsable
+                $insertar1 = "INSERT INTO responsable (id_tareaxrol, id_usuario) VALUES ($id_tarea_rol, $id_userResp)";
+                $resultadoInsertar1 = mysqli_query($conection, $insertar1);
+                
+                
+                //Consultar el id del responsable de hacer la convocatoria para poder obtenerlo para la tabla de inscripcion
+                $consulta3 = "SELECT id FROM responsable WHERE id_usuario='$id_userResp' ORDER BY id DESC LIMIT 1";
+                $resultadoConsulta3 = mysqli_query($conection, $consulta3);
+                $filaConsulta3 = mysqli_fetch_assoc($resultadoConsulta3);
+                $idResponsable = $filaConsulta3['id']; // id del responsable que se inserta en la columna id_responsable de la tabla inscrpción
+
+                $query = "UPDATE inscripcion SET aprobado = '$newUserInscripcion', id_responsable=$idResponsable WHERE id=$userId";
+                $query_run = mysqli_query($conection, $query);
+        
+                if($query_run){
+                    $data = [
+                        'status' => 200,
+                        'message' => ' User Status updated successfully'
+                    ];
+                    header("HTTP/1.0 200 User Status updated successfully");
+                    return json_encode($data);
+                }else{
+                    $data = [
+                        'status' => 500,
+                        'message' => 'Internal server error'
+                    ];
+                    header("HTTP/1.0 500 Internal server error");
+                    return json_encode($data);
+                }
+            }
+
+    //Fin Inscripción de usuarios
 
 //Fin UPDATE
 

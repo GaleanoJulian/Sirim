@@ -125,7 +125,7 @@
                         <div class="input-box">
                             <label>Presentación</label><br>
                             <div class="select-box">
-                                <select>
+                                <select class="presentacionProd_">
                                 <option hidden>Escoja presentación</option>
                                 <option>Bolsa o paquete</option>
                                 <option>Botella</option>

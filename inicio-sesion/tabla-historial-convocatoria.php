@@ -52,11 +52,14 @@
                 INNER JOIN info_usuario ON info_usuario.id_usuario=responsable.id_usuario
                 INNER JOIN usuario ON usuario.id=info_usuario.id_usuario
                 INNER JOIN rol ON rol.id=usuario.id_rol ORDER BY convocatoria.id DESC";
-              $resultadoTC=mysqli_query($conection, $consultaTC);         
+                $resultadoTC = mysqli_query($conection, $consultaTC);
+
+                $registros = mysqli_fetch_all($resultadoTC, MYSQLI_ASSOC);
+                $totalRegistros = count($registros);
               
-              while($mostrar=mysqli_fetch_array($resultadoTC)){
-                $fechaEntrega = $mostrar['fecha_entrega'];
-                $estado = (strtotime($fechaEntrega) <= strtotime(date('Y-m-d'))) ? "No vigente" : "Vigente";
+                foreach ($registros as $index => $mostrar) {
+                  $fechaEntrega = $mostrar['fecha_entrega'];
+                  $estado = ($index === 0) ? "Vigente" : "No vigente";
             ?>
             <tr>
               <td><?php echo $mostrar['id']?></td>

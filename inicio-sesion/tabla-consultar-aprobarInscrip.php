@@ -34,41 +34,9 @@
         <th>Rol</th>
         <th>Convocatoria</th>
         <th>Estado de inscripcion</th>
-        <th>Aprobación</th>
       </tr>
     </thead>
         <tbody>
-              <?php
-              include("../conexion-y-logica/conexion.php");
-    
-              $consultaTI= "SELECT
-              info_usuario.id,
-              info_usuario.nombres AS nombres, 
-              info_usuario.apellidos AS apellidos, 
-              info_usuario.tipo_doc_id AS tipo_doc_id, 
-              info_usuario.doc_identidad AS doc_identidad,
-              rol.rol AS rol
-                FROM info_usuario
-                INNER JOIN usuario ON usuario.id=info_usuario.id_usuario
-                INNER JOIN rol ON rol.id=usuario.id_rol ORDER BY info_usuario.id";
-              $resultadoTI=mysqli_query($conection, $consultaTI);         
-              
-              while($mostrar=mysqli_fetch_array($resultadoTI)){
-            ?>
-            <tr>
-              <td><?php echo $mostrar['nombres']?></td>
-              <td><?php echo $mostrar['apellidos']?></td>
-              <td><?php echo $mostrar['tipo_doc_id']?></td>
-              <td><?php echo $mostrar['doc_identidad']?></td>
-              <td><?php echo $mostrar['rol']?></td>
-              <td>(Fecha convocatoria)</td>
-              <td>(estado)</td>
-              <td>(botones)</td>
-
-            </tr>
-            <?php
-              }
-            ?>
           </tbody>
           <tfoot>
               <tr>
@@ -79,7 +47,6 @@
                 <th>Rol</th>
                 <th>Convocatoria</th>
                 <th>Estado de inscripcion</th>
-                <th>Aprobación</th>
               </tr>
         </tfoot>
     </table>

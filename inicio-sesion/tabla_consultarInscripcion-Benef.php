@@ -23,7 +23,7 @@
 
 <div class="contamy-5" style="width:110%">  
   <div class="row" >
-    <table id="example1" class="table table-striped" >
+    <table id="example3" class="table table-striped" >
     <caption>Inscripcion de usuarios </caption>
     <thead>
       <tr>

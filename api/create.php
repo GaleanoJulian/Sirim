@@ -7,21 +7,29 @@
     include("function.php");
     error_reporting(E_ERROR | E_PARSE);
     $requestMethod = $_SERVER["REQUEST_METHOD"];
+    $functionName = $_GET['functionName'];
+    
     
     if($requestMethod == 'POST'){
 
-        $inputData = json_decode(file_get_contents("php://input"), true);
-        if(empty($inputData)){
-        
-            $storeCustomer = storeCustomer($_POST);
-        
+        if($functionName == 'insertDataInscription'){
+            $inputData = json_decode(file_get_contents("php://input"), true);
+            $result = insertDataInscription($inputData['userId']);
+            echo $result;
         }
-        else {
-
-            $storeCustomer = storeCustomer($inputData);
-
+        elseif($functionName == 'insertDataInscrBenef'){
+            $inscription = insertDataInscrBenef();
+            echo $inscription;
         }
-        echo $storeCustomer;
+        
+        else{
+            $data = [
+                'status' => 405,
+                'message' => "Function $functionName Not Allowed",
+            ];
+            header("HTTP/1.0 405 Function $functionName Not Allowed");
+            echo json_encode($data);
+        }
         
     }
     else{

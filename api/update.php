@@ -21,6 +21,11 @@
             $result = updateUserStatus($inputData['userId'], $inputData['newUserStatus']);
             echo $result;
         }
+        elseif($functionName == 'updateUserInscripcion'){
+            $inputData = json_decode(file_get_contents("php://input"), true);
+            $result = updateUserInscripcion($inputData['userId'], $inputData['newUserInscripcion']);
+            echo $result;
+        }
 
         else{
             $data = [

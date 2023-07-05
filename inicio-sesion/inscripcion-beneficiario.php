@@ -35,7 +35,7 @@
                     <span>Convocatoria activa</span>
                     <input type="text" value="<?php echo $fechaEntrega;?>" name="inscribirse" id="inscribirse">
                 </label>
-            <button type="submit" class="inscribirse-btn">Inscribirse</button>
+            <button type="submit" class="inscribirse-btn" onclick="btnInscBenef()">Inscribirse</button>
             </div>           
         </section>
 

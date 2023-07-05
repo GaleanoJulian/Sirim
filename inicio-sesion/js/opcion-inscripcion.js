@@ -1,4 +1,4 @@
-function mostrarContenidoinscripcion(id) {
+async function mostrarContenidoinscripcion(id) {
     // Obtener todos los elementos con la clase 'contenido'
     var contenidos = document.getElementsByClassName('inscribir-conv');
   
@@ -13,13 +13,34 @@ function mostrarContenidoinscripcion(id) {
 
     var table1Initialized =  $.fn.DataTable.isDataTable('#example1');
     var table2Initialized =  $.fn.DataTable.isDataTable('#example2');
+    var table3Initialized =  $.fn.DataTable.isDataTable('#example3');
     
     if($('#example1').css('display') == 'table' && !table1Initialized){
+      var tableData = (await readData("getUsersWithRole")).data;
+      loadTableInscribirUser(tableData, "example1");
       $('#example1').DataTable(datatTableOptions);
+      addInsertInscEvent();
+
     } 
     if($('#example2').css('display') == 'table' && !table2Initialized){
+      var tableData = (await readData("getUsersInscripcion")).data;
+      loadTableConsultarInsc(tableData, "example2");      
       $('#example2').DataTable(datatTableOptions);
+      setUserInscripStatus();
+      addChangeInscripStatus();
+
+    }
+
+    // Tabla segundo botón de inscripción beneficiario
+
+    if($('#example3').css('display') == 'table' && !table3Initialized){
+      
+      $('#example3').DataTable(datatTableOptions);
+
+      //hacer lo mismo que el anterior if pero cambiando la función que llama la tabla
+
     } 
+
 
 
   }
