@@ -131,6 +131,46 @@
     //Fin inscribir usuarios desde admin-vol
 
     //En tarjetas - Ingresar Productos Nuevos al almacén
+    
+    function insertDataProductLIE($idProducto,$idPresentacion,$contenido,$idUnidad,$fVencimiento,$cantidad){
+        
+        global $conection;
+
+        $insertar1="INSERT INTO lote (id_producto, id_presentacion, contenido, id_unidad, fecha_vencimiento) 
+                    VALUES ($idProducto,$idPresentacion,$contenido,$idUnidad,'$fVencimiento')";
+        $resultadoInsertar1=mysqli_query($conection,$insertar1);
+
+        $consulta1="SELECT id FROM lote";
+        $resultadoConsulta1 = mysqli_query($conection, $consulta1);
+        $filaConsulta1 = mysqli_fetch_assoc($resultadoConsulta1);
+        $idLote = $filaConsulta1['id'];
+        $fechaEntrada=date("Y/m/d");
+        $unidadesSalen=0;
+        $inStock=$cantidad-$unidadesSalen;
+
+        $query = "INSERT INTO inventario (id_lote, fecha_entrada, unidades_entran, unidades_salen, in_stock) 
+                  VALUES ($idLote, '$fechaEntrada', $cantidad, $unidadesSalen, $inStock)";
+        $query_run = mysqli_query($conection, $query);
+
+        if($query_run){
+            $data = [
+                'status' => 200,
+                'message' => 'Customer Created Succesfully'
+            ];
+            header("HTTP/1.0 201 Created");
+            return json_encode($data);
+        }else{
+            $data = [
+                'status' => 500,
+                'message' => 'Internal server error'
+            ];
+            header("HTTP/1.0 500 Internal server error");
+            return json_encode($data);                
+        }
+      
+    }
+  
+    //Fin -Ingresar productos Nuevos al almacén
 
 //Fin INSERT INTO
 
@@ -138,81 +178,118 @@
 //SELECT
 
     //En tarjetas - Ingresar Productos Nuevos al almacén
-    function getProductos (){
+    function getProductos(){
         global $conection;
-    $query = "SELECT * FROM producto";
-    $query_run = mysqli_query($conection,$query);
+        $query = "SELECT * FROM producto";
+        $query_run = mysqli_query($conection,$query);
 
-    if($query_run){
-        if(mysqli_num_rows($query_run) > 0){
-            $res = mysqli_fetch_all($query_run, MYSQLI_ASSOC);
+        if($query_run){
+            if(mysqli_num_rows($query_run) > 0){
+                $res = mysqli_fetch_all($query_run, MYSQLI_ASSOC);
 
-            $data = [
-                'status' => 200,
-                'message' => 'Presentacion list fetched successfully',
-                'data' => $res
-            ];
-            header("HTTP/1.0 200 Presentacion list fetched successfully");
-            return json_encode($data);
+                $data = [
+                    'status' => 200,
+                    'message' => 'Presentacion list fetched successfully',
+                    'data' => $res
+                ];
+                header("HTTP/1.0 200 Presentacion list fetched successfully");
+                return json_encode($data);
+            }
+            else{
+                $data = [
+                    'status' => 404,
+                    'message' => 'No presentacion data found'
+                ];
+                header("HTTP/1.0 404 No presentacion data found");
+                return json_encode($data);
+            }
         }
         else{
             $data = [
-                'status' => 404,
-                'message' => 'No presentacion data found'
+                'status' => 500,
+                'message' => 'Internal server error'
             ];
-            header("HTTP/1.0 404 No presentacion data found");
+            header("HTTP/1.0 500 Internal server error");
             return json_encode($data);
         }
-    }
-    else{
-        $data = [
-            'status' => 500,
-            'message' => 'Internal server error'
-        ];
-        header("HTTP/1.0 500 Internal server error");
-        return json_encode($data);
-    }
 
 
     }
 
-    function getPresentacionProd (){
-        global $conection;
-    $query = "SELECT * FROM presentacion_prod";
-    $query_run = mysqli_query($conection,$query);
+        function getPresentacionProd (){
+                global $conection;
+            $query = "SELECT * FROM presentacion_prod";
+            $query_run = mysqli_query($conection,$query);
 
-    if($query_run){
-        if(mysqli_num_rows($query_run) > 0){
-            $res = mysqli_fetch_all($query_run, MYSQLI_ASSOC);
+            if($query_run){
+                if(mysqli_num_rows($query_run) > 0){
+                    $res = mysqli_fetch_all($query_run, MYSQLI_ASSOC);
 
-            $data = [
-                'status' => 200,
-                'message' => 'Presentacion list fetched successfully',
-                'data' => $res
-            ];
-            header("HTTP/1.0 200 Presentacion list fetched successfully");
-            return json_encode($data);
+                    $data = [
+                        'status' => 200,
+                        'message' => 'Presentacion list fetched successfully',
+                        'data' => $res
+                    ];
+                    header("HTTP/1.0 200 Presentacion list fetched successfully");
+                    return json_encode($data);
+                }
+                else{
+                    $data = [
+                        'status' => 404,
+                        'message' => 'No presentacion data found'
+                    ];
+                    header("HTTP/1.0 404 No presentacion data found");
+                    return json_encode($data);
+                }
+            }
+            else{
+                $data = [
+                    'status' => 500,
+                    'message' => 'Internal server error'
+                ];
+                header("HTTP/1.0 500 Internal server error");
+                return json_encode($data);
+            }
+
+        }
+
+        function getUnidadProd (){
+            global $conection;
+        $query = "SELECT * FROM unidad_producto";
+        $query_run = mysqli_query($conection,$query);
+
+        if($query_run){
+            if(mysqli_num_rows($query_run) > 0){
+                $res = mysqli_fetch_all($query_run, MYSQLI_ASSOC);
+
+                $data = [
+                    'status' => 200,
+                    'message' => 'Presentacion list fetched successfully',
+                    'data' => $res
+                ];
+                header("HTTP/1.0 200 Presentacion list fetched successfully");
+                return json_encode($data);
+            }
+            else{
+                $data = [
+                    'status' => 404,
+                    'message' => 'No presentacion data found'
+                ];
+                header("HTTP/1.0 404 No presentacion data found");
+                return json_encode($data);
+            }
         }
         else{
             $data = [
-                'status' => 404,
-                'message' => 'No presentacion data found'
+                'status' => 500,
+                'message' => 'Internal server error'
             ];
-            header("HTTP/1.0 404 No presentacion data found");
+            header("HTTP/1.0 500 Internal server error");
             return json_encode($data);
         }
-    }
-    else{
-        $data = [
-            'status' => 500,
-            'message' => 'Internal server error'
-        ];
-        header("HTTP/1.0 500 Internal server error");
-        return json_encode($data);
-    }
-
 
     }
+    //Fin Ingresar productos nuevos al almacen
 
     //En Gestión de usuarios
 

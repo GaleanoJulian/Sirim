@@ -35,42 +35,24 @@
         <th>Fecha de entrega</th>
         <th>Estado de aprobación</th>
         <th>Estado de entrega</th>
-        <th>Registrar entrega</th>
+
       </tr>
     </thead>
         <tbody>
-              <?php /*
-              include("../conexion-y-logica/conexion.php");
-    
-              $consultaTI= "SELECT
-              info_usuario.id,
-              info_usuario.nombres AS nombres, 
-              info_usuario.apellidos AS apellidos, 
-              info_usuario.tipo_doc_id AS tipo_doc_id, 
-              info_usuario.doc_identidad AS doc_identidad,
-              rol.rol AS rol
-                FROM info_usuario
-                INNER JOIN usuario ON usuario.id=info_usuario.id_usuario
-                INNER JOIN rol ON rol.id=usuario.id_rol ORDER BY info_usuario.id";
-              $resultadoTI=mysqli_query($conection, $consultaTI);         
-              
-              while($mostrar=mysqli_fetch_array($resultadoTI)){
-            */?>
+            
             <tr>
-                <td>Nombres</td>
-                <td>Apellidos</td>
-                <td>Tipo de documento</td>
-                <td>Documento de identidad</td>
-                <td>Convocatoria</td>
-                <td>Fecha de entrega</td>
-                <td>Estado de aprobación</td>
-                <td>Estado de entrega</td>
-                <td>Registrar entrega</td>
+                <td>Linda Patricia</td>
+                <td>Corredor Medina</td>
+                <td>C.C.</td>
+                <td>1111111111</td>
+                <td>28</td>
+                <td>2023-07-23</td>
+                <td>aprobado</td>
+                <td>entregado</td>
+
 
             </tr>
-            <?php
-              /*}*/
-            ?>
+            
           </tbody>
           <tfoot>
               <tr>
@@ -82,7 +64,7 @@
                 <th>Fecha de entrega</th>
                 <th>Estado de aprobación</th>
                 <th>Estado de entrega</th>
-                <th>Registrar entrega</th>
+
               </tr>
         </tfoot>
     </table>

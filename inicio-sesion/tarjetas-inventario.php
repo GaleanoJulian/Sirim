@@ -109,44 +109,34 @@
                     <div class="input-box">
                             <label>Presentación</label><br>
                             <div class="select-box">
-                                <select class="producto_"></select>
+                                <select class="producto_" id="selectProduct">
+                                    <option value="Seleccione" disabled selected hidden>Escoja producto</option>
+                                </select>
                             </div>         
                         </div> 
 
                         <div class="input-box">
                             <label>Presentación</label><br>
                             <div class="select-box">
-                                <select class="presentacionProd_">
-                                <option hidden>Escoja presentación</option>
-                                <option>Bolsa o paquete</option>
-                                <option>Botella</option>
-                                <option>Caja</option>
-                                <option>A granel</option>
-                                <option>Sachet</option>
-                                <option>Lata</option>
-                                <option>Unidad</option>
+                                <select class="presentacionProd_"id="selectPresentacion">
+                                <option value="Seleccione" disabled selected hidden hidden>Escoja presentación</option>
+
                             </select>
                             </div>         
                         </div>           
                     
                         <div class="column">
                     
-                            <div class="input-box">
+                            <div class="input-box" >
                                 <label>Contenido</label>
-                                <input type="text" placeholder="Por ejemplo: 500" required />
+                                <input type="text" id="enterContenido" placeholder="Por ejemplo: 500" required />
                             </div>
 
                             <div class="input-box">
                                 <label>Unidad</label>
                                 <div class="select-box">
-                                    <select>
-                                        <option hidden>Por ejemplo: Gramos</option>
-                                        <option>Gramos</option>
-                                        <option>Kilogramos</option>
-                                        <option>Litros</option>
-                                        <option>Mililitros</option>
-                                        <option>Onzas</option>
-                                        <option>Litros</option>
+                                    <select class="unidadProd_"id="selectUnidad">
+                                        <option value="Seleccione" disabled selected hidden hidden>Por ejemplo: Gramos</option>
                                     </select>
                                 </div>
                             </div>
@@ -243,15 +233,8 @@
                         </div>
 
                         <div class="input-box">
-                            <label>Seleccionar cantidad</label><br>
-                            <div class="select-box">
-                                <input list="Cantidad">
-                                <datalist id="productos">
-                                    <option value="1"></option>
-                                    <option value="2"></option>
-                                </datalist>
-
-                            </div>         
+                            <label>Indicar cantidad</label><br>
+                            <input type="number" placeholder="Por ejemplo: 2" required />    
                         </div>
 
                         <input class="btn" type="submit" value="Adicionar al paquete">

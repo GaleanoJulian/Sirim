@@ -38,37 +38,38 @@
       </tr>
     </thead>
         <tbody>
-              <?php /*
-              include("../conexion-y-logica/conexion.php");
-    
-              $consultaTI= "SELECT
-              info_usuario.id,
-              info_usuario.nombres AS nombres, 
-              info_usuario.apellidos AS apellidos, 
-              info_usuario.tipo_doc_id AS tipo_doc_id, 
-              info_usuario.doc_identidad AS doc_identidad,
-              rol.rol AS rol
-                FROM info_usuario
-                INNER JOIN usuario ON usuario.id=info_usuario.id_usuario
-                INNER JOIN rol ON rol.id=usuario.id_rol ORDER BY info_usuario.id";
-              $resultadoTI=mysqli_query($conection, $consultaTI);         
-              
-              while($mostrar=mysqli_fetch_array($resultadoTI)){
-            */?>
             <tr>
-                <td>Listado</td>
-                <td>Fecha de elaboración</td>
-                <td>Elaboró</td>
-                <td>Rol</td>
-                <td>Aprobar</td>
-                <td>Estado de aprobación</td>
-                <td>Aprobó</td>
-                <td>Fecha de aprobación</td>
+                <td>2</td>
+                <td>06/07/2023</td>
+                <td>Julian David Forero Galeano</td>
+                <td>Voluntario</td>
+                <td><select style="background-color: white;" name="estadoConvocatoria" class="estadoConvocatoria_" id="statusconvocatoria_${item.idUser}" data-selectedvalue="${item.estadoInscripcion}">
+                <option value="aprobado">aprobado</option>
+                <option value="por aprobar">por aprobar</option>
+                <option value="desaprobado">desaprobado</option>
+            </select></td>
+                <td>por aprobar</td>
+                <td>por aprobar</td>
+                <td>aaaa/mm/dd</td>
 
             </tr>
-            <?php
-             // }
-            ?>
+
+            <tr>
+                <td>1</td>
+                <td>06/07/2023</td>
+                <td>Daniela Alexandra Ardila Viasus</td>
+                <td>Administrador</td>
+                <td><select style="background-color: white;" name="estadoConvocatoria" class="estadoConvocatoria_" id="statusconvocatoria_${item.idUser}" data-selectedvalue="${item.estadoInscripcion}">
+                <option value="aprobado">aprobado</option>
+                <option value="por aprobar">por aprobar</option>
+                <option value="desaprobado">desaprobado</option>
+            </select></td>
+                <td>aprobado</td>
+                <td>Daniela Alexandra Ardila Viasus</td>
+                <td>2023/07/06</td>
+
+            </tr>
+
           </tbody>
           <tfoot>
               <tr>

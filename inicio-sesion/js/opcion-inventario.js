@@ -50,4 +50,8 @@ function initTables(){
   if($('#example3').css('display') == 'table' && !table3Initialized){
     $('#example3').DataTable(datatTableOptions);
   } 
+
+  fillProductoSelect();
+  fillPresentacionSelect();
+  fillUnidadSelect();
 }

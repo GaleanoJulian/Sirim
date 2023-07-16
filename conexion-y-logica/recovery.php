@@ -37,7 +37,7 @@ try {
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = 'Recuperacion de contrasena';
     $mail->Body    = 'Hola, este es un correo generado para solicitar la recuperación de tu contraseña, por favor, 
-    visita la página <a href="sirim.online/Sirim/change_password.php?id='.$row['id'].'">Recuperación de contraseña</a>';
+    visita la página <a href="sirim.online/change_password.php?id='.$row['id'].'">Recuperación de contraseña</a>';
 
     $mail->send();
     echo '<script>

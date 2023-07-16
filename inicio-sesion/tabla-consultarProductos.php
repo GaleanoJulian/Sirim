@@ -40,39 +40,47 @@
       </tr>
     </thead>
         <tbody>
-              <?php
-              /*include("../conexion-y-logica/conexion.php");
-    
-              $consultaTI= "SELECT
-              info_usuario.id,
-              info_usuario.nombres AS nombres, 
-              info_usuario.apellidos AS apellidos, 
-              info_usuario.tipo_doc_id AS tipo_doc_id, 
-              info_usuario.doc_identidad AS doc_identidad,
-              rol.rol AS rol
-                FROM info_usuario
-                INNER JOIN usuario ON usuario.id=info_usuario.id_usuario
-                INNER JOIN rol ON rol.id=usuario.id_rol ORDER BY info_usuario.id";
-              $resultadoTI=mysqli_query($conection, $consultaTI);         
-              
-              while($mostrar=mysqli_fetch_array($resultadoTI)){*/
-            ?>
+
             <tr>
-              <td>Producto</td>
-              <td>Categoría</td>
-              <td>Presentación</td>
-              <td>Contenido</td>
-              <td>Unidad</td>
-              <td>Fecha de Ingreso</td>
-              <td>Fecha de vencimiento</td>
-              <td>(Fecha convocatoria)</td>
-              <td>(estado)</td>
-              <td>(botones)</td>
+              <td>Arroz</td>
+              <td>No perecedero</td>
+              <td>Bolsa/paquete</td>
+              <td>500</td>
+              <td>gramos</td>
+              <td>05/07/2023</td>
+              <td>10/01/2025</td>
+              <td>No ha vencido</td>
+              <td>40</td>
+              <td><button type="submit" name="inscribirUsuario" class="inscribirUsuario_" 
+              id="inscUsuario_${item.idUser}" style=" padding: 0.3rem 1rem; background: #3FABDD; color:white; 
+              cursor: pointer; border-radius: 1rem; border-top: none; 
+              border-left: none;">
+              Eliminar
+              </button></td>
+
 
             </tr>
-            <?php
-             // }
-            ?>
+
+            <tr>
+              <td>Leche</td>
+              <td>Perecedero</td>
+              <td>Bolsa/paquete</td>
+              <td>900</td>
+              <td>mililitros</td>
+              <td>05/07/2023</td>
+              <td>25/07/2023</td>
+              <td>No ha vencido</td>
+              <td>40</td>
+              <td><button type="submit" name="inscribirUsuario" class="inscribirUsuario_" 
+              id="inscUsuario_${item.idUser}" style=" padding: 0.3rem 1rem; background: #3FABDD; color:white; 
+              cursor: pointer; border-radius: 1rem; border-top: none; 
+              border-left: none;">
+              Eliminar
+              </button></td>
+
+
+            </tr>
+
           </tbody>
           <tfoot>
               <tr>
@@ -86,6 +94,7 @@
                 <th>Estado</th>
                 <th>Cantidad</th>
                 <th>Eliminar</th>
+
               </tr>
         </tfoot>
     </table>

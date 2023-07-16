@@ -35,33 +35,15 @@
       </tr>
     </thead>
         <tbody>
-              <?php
-              /*include("../conexion-y-logica/conexion.php");
-    
-              $consultaTI= "SELECT
-              info_usuario.id,
-              info_usuario.nombres AS nombres, 
-              info_usuario.apellidos AS apellidos, 
-              info_usuario.tipo_doc_id AS tipo_doc_id, 
-              info_usuario.doc_identidad AS doc_identidad,
-              rol.rol AS rol
-                FROM info_usuario
-                INNER JOIN usuario ON usuario.id=info_usuario.id_usuario
-                INNER JOIN rol ON rol.id=usuario.id_rol ORDER BY info_usuario.id";
-              $resultadoTI=mysqli_query($conection, $consultaTI);         
-              
-              while($mostrar=mysqli_fetch_array($resultadoTI)){*/
-            ?>
+
             <tr>
-              <td>Fecha de creación</td>
-              <td>Elaboró</td>
-              <td>Rol</td>
-              <td>Cantidad</td>
-              <td>Unidad</td>
+              <td>06/07/2023</td>
+              <td>Daniela Alexandra Ardila Viasus</td>
+              <td>Administrador</td>
+              <td>3 productos</td>
+              <td>40</td>
             </tr>
-            <?php
-             // }
-            ?>
+
           </tbody>
           <tfoot>
               <tr>

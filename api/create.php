@@ -21,6 +21,16 @@
             $inscription = insertDataInscrBenef();
             echo $inscription;
         }
+        elseif($functionName == 'insertDataProductLIE'){
+            $loteInvEntr = insertDataProductLIE(
+                $inputData['idProducto'], 
+                $inputData['idPresentacion'], 
+                $inputData['contenido'], 
+                $inputData['idUnidad'],
+                $inputData['fVencimiento'], 
+                $inputData['cantidad']);
+            echo $loteInvEntr;
+        }
         
         else{
             $data = [

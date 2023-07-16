@@ -36,35 +36,52 @@
       </tr>
     </thead>
         <tbody>
-              <?php
-              /*include("../conexion-y-logica/conexion.php");
-    
-              $consultaTI= "SELECT
-              info_usuario.id,
-              info_usuario.nombres AS nombres, 
-              info_usuario.apellidos AS apellidos, 
-              info_usuario.tipo_doc_id AS tipo_doc_id, 
-              info_usuario.doc_identidad AS doc_identidad,
-              rol.rol AS rol
-                FROM info_usuario
-                INNER JOIN usuario ON usuario.id=info_usuario.id_usuario
-                INNER JOIN rol ON rol.id=usuario.id_rol ORDER BY info_usuario.id";
-              $resultadoTI=mysqli_query($conection, $consultaTI);         
-              
-              while($mostrar=mysqli_fetch_array($resultadoTI)){*/
-            ?>
+
             <tr>
-                <td>Producto</td>
-                <td>Presentación</td>
-                <td>Contenido</td>
-                <td>Unidad</td>
-                <td>Cantidad</td>
-                <td>Eliminar</td>
+                <td>Arroz</td>
+                <td>bolsa/paquete</td>
+                <td>500</td>
+                <td>gramos</td>
+                <td>2</td>
+                <td><button type="submit" name="inscribirUsuario" class="inscribirUsuario_" 
+                id="inscUsuario_${item.idUser}" style=" padding: 0.3rem 1rem; background: #3FABDD; color:white; 
+                cursor: pointer; border-radius: 1rem; border-top: none; 
+                border-left: none;">
+                Eliminar
+                </button></td>
 
             </tr>
-            <?php
-             // }
-            ?>
+
+            <tr>
+                <td>Lenteja</td>
+                <td>bolsa/paquete</td>
+                <td>500</td>
+                <td>gramos</td>
+                <td>1</td>
+                <td><button type="submit" name="inscribirUsuario" class="inscribirUsuario_" 
+                id="inscUsuario_${item.idUser}" style=" padding: 0.3rem 1rem; background: #3FABDD; color:white; 
+                cursor: pointer; border-radius: 1rem; border-top: none; 
+                border-left: none;">
+                Eliminar
+                </button></td>
+
+            </tr>
+
+            <tr>
+                <td>Frijol</td>
+                <td>bolsa/paquete</td>
+                <td>500</td>
+                <td>gramos</td>
+                <td>1</td>
+                <td><button type="submit" name="inscribirUsuario" class="inscribirUsuario_" 
+                id="inscUsuario_${item.idUser}" style=" padding: 0.3rem 1rem; background: #3FABDD; color:white; 
+                cursor: pointer; border-radius: 1rem; border-top: none; 
+                border-left: none;">
+                Eliminar
+                </button></td>
+
+            </tr>
+
           </tbody>
           <tfoot>
               <tr>

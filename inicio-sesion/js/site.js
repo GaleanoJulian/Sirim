@@ -1,4 +1,4 @@
-const serverUrl = "http://localhost/Sirim";
+const serverUrl = "http://localhost/Sirim"; //sirim.online (no colocar /Sirim)
 
 
 
@@ -277,6 +277,61 @@ async function deleteData(functionName, inputData){
         });
     }
 
+    async function fillPresentacionSelect(){
+        var newOptions = (await readData("getPresentacionProd")).data;
+
+        var $el = $(".presentacionProd_");
+        $el.empty(); // remove old options
+        newOptions.forEach(x => {
+            $el.append($("<option></option>")
+            .attr("value", x.id).text(x.presentacion));
+        });
+    }
+
+    async function fillUnidadSelect(){
+        var newOptions = (await readData("getUnidadProd")).data;
+
+        var $el = $(".unidadProd_");
+        $el.empty(); // remove old options
+        newOptions.forEach(x => {
+            $el.append($("<option></option>")
+            .attr("value", x.id).text(x.unidad));
+        });
+    }
+
+    function loadFormInsertProducts(items, formId) {
+        const table = document.getElementById(formId);
+
+        //revisar esto para poder insertar con el botón
+        var index = 1;
+        items.forEach( item => {
+        let row = tbodyRef.insertRow();
+        let nombres = row.insertCell(0);
+        nombres.innerHTML = item.nombres;
+        let apellidos = row.insertCell(1);
+        apellidos.innerHTML = item.apellidos;
+        let tipoDocumento = row.insertCell(2);
+        tipoDocumento.innerHTML = item.tipo_doc_id;
+        let documento = row.insertCell(3);
+        documento.innerHTML = item.doc_identidad;
+        let rol = row.insertCell(4);
+        rol.innerHTML = item.rolUser;
+        let convocatoria = row.insertCell(5);
+        convocatoria.innerHTML = item.fechaEntrega;
+        let estado = row.insertCell(6);
+        estado.innerHTML = `
+            <select style="background-color: white;" name="estadoConvocatoria" class="estadoConvocatoria_" id="statusconvocatoria_${item.idUser}" data-selectedvalue="${item.estadoInscripcion}">
+                <option value="aprobado">aprobado</option>
+                <option value="por aprobar">por aprobar</option>
+                <option value="desaprobado">desaprobado</option>
+            </select>`;
+            index++;
+        });
+    }
+
+
+
+    
     //Fin Ingresar producto al almacén
 
 

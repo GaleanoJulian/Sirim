@@ -22,7 +22,7 @@
             $userList = getUsersWithRole();
             echo $userList;
         }
-        elseif($functionName == "getProdcutos"){
+        elseif($functionName == "getProductos"){
             $productsList = getProductos();
             echo $productsList;
         }
@@ -37,6 +37,10 @@
         elseif($functionName == "getUsersInscInfo"){
             $inscripcionList = getUsersInscInfo();
             echo $inscripcionList;
+        }
+        elseif($functionName == "getUnidadProd"){
+            $unidadProductoList = getUnidadProd();
+            echo $unidadProductoList;
         }
         
     }
